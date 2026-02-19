@@ -1,0 +1,202 @@
+<footer
+    class="tw-mt-auto tw-w-full tw-bg-gradient-to-br tw-from-blue-100 tw-to-green-100 tw-text-black"
+>
+    <!-- Main Footer Content -->
+    <div class="tw-flex tw-w-full tw-place-content-around tw-gap-8 tw-p-12 tw-px-[10%] max-md:tw-flex-col max-md:tw-p-8">
+        <div
+            class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-place-items-center tw-gap-6 max-md:tw-w-full"
+        >
+            <img
+                src="./assets/logo/freytor-logo.png"
+                alt="Freytor logo"
+                class="tw-max-w-[120px]"
+            />
+            <div class="tw-text-center tw-text-gray-700">
+                <span data-i18n="footer.address.line1">P.H. Colonial, Vía Israel</span>
+                <br />
+                <span data-i18n="footer.address.line2">San Francisco</span>
+                <br />
+                <span data-i18n="footer.address.line3">Panama City, Panama</span>
+            </div>
+            <div class="tw-mt-3 tw-text-lg tw-font-semibold" data-i18n="footer.follow">Follow us!</div>
+            <div class="tw-flex tw-gap-4 tw-text-2xl">
+                <a href="https://www.linkedin.com/company/freytor" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="tw-text-gray-700 tw-transition-colors hover:tw-text-brand-blue">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="tw-flex tw-h-full tw-w-[250px] tw-flex-col tw-gap-6 max-md:tw-w-full">
+            <h2 class="tw-text-3xl tw-text-brand-blue tw-font-bold max-md:tw-text-xl" data-i18n="footer.resources">Resources</h2>
+            <div class="tw-flex tw-flex-col tw-gap-3 max-md:tw-text-sm">
+                <a href="about.html" class="footer-link" data-i18n="nav.about">About us</a>
+                <a href="faq.html" class="footer-link" data-i18n="nav.faq">FAQ</a>
+                <a href="contact.html" class="footer-link" data-i18n="nav.contact">Contact Us</a>
+                <a href="privacy.html" class="footer-link" data-i18n="footer.privacy">Privacy Policy</a>
+                <a href="terms.html" class="footer-link" data-i18n="footer.terms">Terms of Service</a>
+            </div>
+        </div>
+
+        <!-- Newsletter Signup -->
+        <div class="tw-flex tw-h-full tw-w-[300px] tw-flex-col tw-gap-6 max-md:tw-w-full">
+            <h2 class="tw-text-3xl tw-text-brand-blue tw-font-bold max-md:tw-text-xl" data-i18n="footer.newsletter">Newsletter</h2>
+            <p class="tw-text-gray-700 tw-text-sm" data-i18n="footer.newsletter.desc">Get logistics tips, product updates, and industry insights delivered to your inbox.</p>
+            <form id="newsletter-form" action="https://formsubmit.co/1632ca8c2a91e7abebfce80c7a8fe05a" method="POST" class="tw-flex tw-flex-col tw-gap-3">
+                <!-- FormSubmit Configuration -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://maxia380.github.io/thank-you.html">
+                <input type="hidden" name="_subject" value="New Newsletter Subscription - Freytor">
+                <input type="hidden" name="_template" value="box">
+                <input type="text" name="_honey" style="display:none">
+                
+                <div class="tw-flex tw-gap-2">
+                    <input 
+                        type="email" 
+                        id="newsletter-email"
+                        name="email"
+                        data-i18n-placeholder="footer.newsletter.email"
+                        placeholder="Enter your email" 
+                        required
+                        class="tw-flex-1 tw-px-4 tw-py-2 tw-rounded-lg tw-border tw-border-gray-300 tw-text-sm focus:tw-outline-none focus:tw-border-brand-blue"
+                    />
+                    <button type="submit" id="newsletter-submit-btn" class="tw-bg-brand-blue tw-text-white tw-px-4 tw-py-2 tw-rounded-lg tw-font-semibold tw-text-sm hover:tw-bg-brand-blue-dark tw-transition-colors">
+                        <i class="bi bi-send"></i>
+                    </button>
+                </div>
+                <p class="tw-text-xs tw-text-gray-500" data-i18n="footer.newsletter.nospam">No spam, unsubscribe anytime.</p>
+            </form>
+
+            <!-- Trust Badges -->
+            <div class="tw-mt-4">
+                <p class="tw-text-sm tw-font-semibold tw-text-gray-700 tw-mb-3" data-i18n="footer.trust.title">Trusted & Secure</p>
+                <div class="tw-flex tw-flex-wrap tw-gap-3">
+                    <div class="tw-flex tw-items-center tw-gap-1 tw-bg-white tw-px-3 tw-py-1.5 tw-rounded-full tw-text-xs tw-text-gray-600 tw-shadow-sm">
+                        <i class="bi bi-shield-lock-fill tw-text-brand-green"></i>
+                        <span data-i18n="footer.trust.ssl">SSL Secured</span>
+                    </div>
+                    <div class="tw-flex tw-items-center tw-gap-1 tw-bg-white tw-px-3 tw-py-1.5 tw-rounded-full tw-text-xs tw-text-gray-600 tw-shadow-sm">
+                        <i class="bi bi-patch-check-fill tw-text-brand-blue"></i>
+                        <span data-i18n="footer.trust.gdpr">GDPR-Aligned</span>
+                    </div>
+                    <div class="tw-flex tw-items-center tw-gap-1 tw-bg-white tw-px-3 tw-py-1.5 tw-rounded-full tw-text-xs tw-text-gray-600 tw-shadow-sm">
+                        <i class="bi bi-award-fill tw-text-amber-500"></i>
+                        <span data-i18n="footer.trust.soc2">SOC 2</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="tw-border-t tw-border-gray-300/50 tw-py-4 tw-px-[10%]">
+        <div class="tw-flex tw-flex-wrap tw-justify-between tw-items-center tw-gap-4 max-md:tw-justify-center max-md:tw-text-center">
+            <p class="tw-text-sm tw-text-gray-600" data-i18n="footer.copyright">
+                © 2026 Freytor. All rights reserved.
+            </p>
+            <div class="tw-flex tw-items-center tw-gap-4 tw-text-sm tw-text-gray-600">
+                <a href="privacy.html" class="hover:tw-text-brand-blue tw-transition-colors" data-i18n="footer.privacy">Privacy</a>
+                <span>•</span>
+                <a href="terms.html" class="hover:tw-text-brand-blue tw-transition-colors" data-i18n="footer.terms">Terms</a>
+                <span>•</span>
+                <a href="contact.html" class="hover:tw-text-brand-blue tw-transition-colors" data-i18n="nav.contact">Contact</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Cookie Consent Banner -->
+<div id="cookie-consent" class="cookie-consent" role="dialog" aria-labelledby="cookie-consent-title" aria-describedby="cookie-consent-description">
+    <div class="cookie-consent__text">
+        <strong id="cookie-consent-title" data-i18n="cookie.title">🍪 Cookie Notice</strong>
+        <p id="cookie-consent-description" data-i18n-html="cookie.desc">We use cookies to improve your experience and analyze site traffic. By clicking "Accept", you consent to our use of cookies. Read our <a href="privacy.html">Privacy Policy</a> for more details.</p>
+    </div>
+    <div class="cookie-consent__buttons">
+        <button type="button" class="cookie-consent__btn cookie-consent__btn--accept" onclick="acceptCookies()" data-i18n="cookie.accept">
+            Accept All
+        </button>
+        <button type="button" class="cookie-consent__btn cookie-consent__btn--decline" onclick="declineCookies()" data-i18n="cookie.decline">
+            Decline
+        </button>
+    </div>
+</div>
+
+<script>
+    // Cookie Consent Logic
+    function getCookieConsent() {
+        return localStorage.getItem('cookieConsent');
+    }
+
+    function setCookieConsent(value) {
+        localStorage.setItem('cookieConsent', value);
+        localStorage.setItem('cookieConsentDate', new Date().toISOString());
+    }
+
+    function showCookieConsent() {
+        const banner = document.getElementById('cookie-consent');
+        if (banner) {
+            banner.classList.remove('hidden');
+            setTimeout(() => banner.classList.add('show'), 100);
+        }
+    }
+
+    function hideCookieConsent() {
+        const banner = document.getElementById('cookie-consent');
+        if (banner) {
+            banner.classList.remove('show');
+            setTimeout(() => banner.classList.add('hidden'), 300);
+        }
+    }
+
+    function acceptCookies() {
+        setCookieConsent('accepted');
+        hideCookieConsent();
+        // Here you would initialize analytics, etc.
+    }
+
+    function declineCookies() {
+        setCookieConsent('declined');
+        hideCookieConsent();
+    }
+
+    // Check if consent has been given
+    document.addEventListener('DOMContentLoaded', function() {
+        const consent = getCookieConsent();
+        if (!consent) {
+            // Show banner after a short delay
+            setTimeout(showCookieConsent, 1000);
+        } else {
+            // Hide the banner if consent already given
+            const banner = document.getElementById('cookie-consent');
+            if (banner) banner.classList.add('hidden');
+        }
+    });
+</script>
+
+<script>
+    // Newsletter form handler
+    const newsletterForm = document.getElementById('newsletter-form');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', (e) => {
+            const email = document.getElementById('newsletter-email');
+            const btn = document.getElementById('newsletter-submit-btn');
+            
+            // Validate email
+            if (!email || !email.value || !email.value.includes('@')) {
+                e.preventDefault();
+                email.classList.add('tw-border-red-500');
+                return;
+            }
+            
+            email.classList.remove('tw-border-red-500');
+            
+            // Show loading state
+            if (btn) {
+                btn.disabled = true;
+                btn.innerHTML = '<i class="bi bi-arrow-repeat tw-animate-spin"></i>';
+            }
+            
+            // Let the form submit naturally to FormSubmit
+            // User will be redirected to thank-you.html
+        });
+    }
+</script>

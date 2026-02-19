@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://plausible.io; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://plausible.io" />
+        <title>Sign Up - Freytor</title>
+        <meta name="description" content="Start your 30-day free pilot with Freytor. No credit card required. We import your first 20 shipments free and give you a guided onboarding call." />
+        <link rel="shortcut icon" href="./assets/logo/logo.png" type="image/x-icon" />
+        
+        <!-- Plausible Analytics -->
+        <script defer data-domain="freytor.com" src="https://plausible.io/js/script.js"></script>
+        
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="./tailwind.config.js"></script>
+        <link rel="stylesheet" href="./css/index.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+            integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-gradient-to-br tw-from-white tw-via-blue-50/30 tw-to-green-50/30">
+        <a href="#main-content" class="skip-to-content">Skip to main content</a>
+        
+        <!-- Header Component -->
+        <div id="header-component"></div>
+
+        <main id="main-content" class="tw-flex tw-min-h-[100vh] tw-w-full tw-items-center tw-justify-center tw-p-4 tw-py-24">
+            <div class="tw-w-full tw-max-w-[600px]">
+                <div class="tw-bg-white tw-rounded-2xl tw-shadow-xl tw-p-8 tw-border-2 tw-border-green-100 tw-transition-all tw-duration-300 hover:tw-shadow-2xl max-md:tw-p-6">
+                    <div class="tw-text-center tw-mb-8">
+                        <div class="tw-flex tw-justify-center tw-mb-4">
+                            <div class="tw-flex tw-h-16 tw-w-16 tw-place-items-center tw-place-content-center tw-rounded-full tw-bg-green-100">
+                                <i class="bi bi-person-plus tw-text-4xl tw-text-brand-green"></i>
+                            </div>
+                        </div>
+                        <h1 class="tw-text-5xl tw-font-bold tw-mb-3 tw-leading-[1.2]">
+                            <span data-i18n="signup.title1">Start Your</span> <span class="tw-text-brand-green" data-i18n="signup.title2">Free Pilot</span>
+                        </h1>
+                        <p class="tw-text-gray-600 tw-text-lg" data-i18n="signup.subtitle">30 days free • No credit card • We import your first 20 shipments</p>
+                    </div>
+                    
+                    <!-- Progress Indicator -->
+                    <div class="tw-flex tw-justify-center tw-items-center tw-mb-8 tw-px-4">
+                        <div class="tw-flex tw-items-center tw-gap-2">
+                            <div class="tw-flex tw-items-center">
+                                <div class="tw-w-8 tw-h-8 tw-rounded-full tw-bg-brand-blue tw-text-white tw-flex tw-items-center tw-justify-center tw-font-bold tw-text-sm tw-shadow-md">1</div>
+                                <span class="tw-ml-2 tw-text-sm tw-font-semibold tw-text-gray-700">Your Info</span>
+                            </div>
+                            <div class="tw-w-12 tw-h-1 tw-bg-gray-200 tw-mx-1"></div>
+                            <div class="tw-flex tw-items-center tw-opacity-50">
+                                <div class="tw-w-8 tw-h-8 tw-rounded-full tw-bg-gray-200 tw-flex tw-items-center tw-justify-center tw-font-bold tw-text-sm">2</div>
+                                <span class="tw-ml-2 tw-text-sm tw-text-gray-500">Confirmation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Success/Error Messages -->
+                    <div id="signup-message" class="tw-hidden tw-mb-6 tw-p-4 tw-rounded-lg"></div>
+
+                    <form id="signup-form" class="tw-space-y-5">
+                        <div class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 tw-gap-4">
+                            <div>
+                                <label class="tw-block tw-text-sm tw-font-semibold tw-text-gray-700 tw-mb-2" data-i18n="signup.firstname">
+                                    First Name *
+                                </label>
+                                <input 
+                                    type="text"
+                                    id="first-name"
+                                    name="firstName"
+                                    required
+                                    class="input tw-w-full tw-rounded-lg"
+                                    placeholder="John"
+                                    data-i18n-placeholder="signup.firstname.placeholder"
+                                />
+                                <span class="tw-text-red-500 tw-text-sm tw-hidden" id="first-name-error"></span>
+                            </div>
+
+                            <div>
+                                <label class="tw-block tw-text-sm tw-font-semibold tw-text-gray-700 tw-mb-2" data-i18n="signup.lastname">
+                                    Last Name *
+                                </label>
+                                <input 
+                                    type="text"
+                                    id="last-name"
+                                    name="lastName"
+                                    required
+                                    class="input tw-w-full tw-rounded-lg"
+                                    placeholder="Doe"
+                                    data-i18n-placeholder="signup.lastname.placeholder"
+                                />
+                                <span class="tw-text-red-500 tw-text-sm tw-hidden" id="last-name-error"></span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="tw-block tw-text-sm tw-font-semibold tw-text-gray-700 tw-mb-2" data-i18n="signup.email">
+                                Email Address *
+                            </label>
+                            <div class="tw-relative">
+                                <input 
+                                    type="email"
+                                    id="signup-email"
+                                    name="email"
+                                    required
+                                    class="input tw-w-full tw-rounded-lg tw-pl-10"
+                                    placeholder="you@example.com"
+                                    data-i18n-placeholder="signup.email.placeholder"
+                                />
+                                <i class="bi bi-envelope tw-absolute tw-left-3 tw-top-1/2 tw--translate-y-1/2 tw-text-gray-400"></i>
+                            </div>
+                            <span class="tw-text-red-500 tw-text-sm tw-hidden" id="signup-email-error"></span>
+                        </div>
+
+                        <div>
+                            <label class="tw-block tw-text-sm tw-font-semibold tw-text-gray-700 tw-mb-2" data-i18n="signup.company">
+                                Company Name *
+                            </label>
+                            <div class="tw-relative">
+                                <input 
+                                    type="text"
+                                    id="company"
+                                    name="company"
+                                    required
+                                    class="input tw-w-full tw-rounded-lg tw-pl-10"
+                                    placeholder="Your Company"
+                                    data-i18n-placeholder="signup.company.placeholder"
+                                />
+                                <i class="bi bi-building tw-absolute tw-left-3 tw-top-1/2 tw--translate-y-1/2 tw-text-gray-400"></i>
+                            </div>
+                            <span class="tw-text-red-500 tw-text-sm tw-hidden" id="company-error"></span>
+                        </div>
+
+                        <div>
+                            <label class="tw-block tw-text-sm tw-font-semibold tw-text-gray-700 tw-mb-2" data-i18n="signup.phone">
+                                Phone Number (Optional)
+                            </label>
+                            <div class="tw-relative">
+                                <input 
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    class="input tw-w-full tw-rounded-lg tw-pl-10"
+                                    placeholder="+1 (555) 000-0000"
+                                    data-i18n-placeholder="signup.phone.placeholder"
+                                />
+                                <i class="bi bi-telephone tw-absolute tw-left-3 tw-top-1/2 tw--translate-y-1/2 tw-text-gray-400"></i>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="tw-block tw-text-sm tw-font-semibold tw-text-gray-700 tw-mb-2" data-i18n="signup.password">
+                                Password *
+                            </label>
+                            <div class="tw-relative">
+                                <input 
+                                    type="password"
+                                    id="signup-password"
+                                    name="password"
+                                    required
+                                    class="input tw-w-full tw-rounded-lg tw-pl-10 tw-pr-10"
+                                    placeholder="Create a strong password"
+                                    data-i18n-placeholder="signup.password.placeholder"
+                                />
+                                <i class="bi bi-lock tw-absolute tw-left-3 tw-top-1/2 tw--translate-y-1/2 tw-text-gray-400"></i>
+                                <button type="button" onclick="togglePassword('signup-password')" class="tw-absolute tw-right-3 tw-top-1/2 tw--translate-y-1/2 tw-text-gray-400 hover:tw-text-gray-600">
+                                    <i class="bi bi-eye" id="signup-password-toggle"></i>
+                                </button>
+                            </div>
+                            <div class="tw-flex tw-items-center tw-gap-1 tw-mt-2">
+                                <div id="strength-bar" class="tw-flex tw-gap-1 tw-w-full">
+                                    <div class="tw-h-1 tw-w-1/4 tw-bg-gray-200 tw-rounded"></div>
+                                    <div class="tw-h-1 tw-w-1/4 tw-bg-gray-200 tw-rounded"></div>
+                                    <div class="tw-h-1 tw-w-1/4 tw-bg-gray-200 tw-rounded"></div>
+                                    <div class="tw-h-1 tw-w-1/4 tw-bg-gray-200 tw-rounded"></div>
+                                </div>
+                            </div>
+                            <p class="tw-text-xs tw-text-gray-500 tw-mt-1" data-i18n="signup.password.hint">Must be at least 8 characters with uppercase, lowercase, and number</p>
+                            <span class="tw-text-red-500 tw-text-sm tw-hidden" id="signup-password-error"></span>
+                        </div>
+
+                        <div>
+                            <label class="tw-block tw-text-sm tw-font-semibold tw-text-gray-700 tw-mb-2" data-i18n="signup.plan">
+                                Choose a Plan
+                            </label>
+                            <select 
+                                id="plan"
+                                name="plan"
+                                required
+                                class="input tw-w-full tw-rounded-lg"
+                            >
+                                <option value="" data-i18n="signup.plan.select">Select a plan</option>
+                                <option value="starter" data-i18n="signup.plan.starter">Starter - $19/month</option>
+                                <option value="growth" selected data-i18n="signup.plan.growth">Growth - $39/month (Most Popular)</option>
+                                <option value="enterprise" data-i18n="signup.plan.enterprise">Enterprise - $79/month</option>
+                            </select>
+                        </div>
+
+                        <div class="tw-flex tw-items-start">
+                            <input 
+                                type="checkbox" 
+                                required
+                                id="terms"
+                                name="terms"
+                                class="tw-w-4 tw-h-4 tw-mt-1 tw-text-brand-blue tw-border-gray-300 tw-rounded focus:tw-ring-brand-blue tw-cursor-pointer"
+                            />
+                            <label for="terms" class="tw-ml-2 tw-text-sm tw-text-gray-600 tw-cursor-pointer">
+                                <span data-i18n="signup.terms">I agree to the</span> <a href="terms.html" class="tw-text-brand-blue hover:tw-underline tw-font-medium" data-i18n="signup.terms.tos">Terms of Service</a> <span data-i18n="signup.terms.and">and</span> <a href="privacy.html" class="tw-text-brand-blue hover:tw-underline tw-font-medium" data-i18n="signup.terms.privacy">Privacy Policy</a>
+                            </label>
+                        </div>
+
+                        <!-- Honeypot field - hidden from users, bots will fill it -->
+                        <div class="tw-hidden" aria-hidden="true">
+                            <input type="text" name="website" id="website" tabindex="-1" autocomplete="off" />
+                        </div>
+
+                        <button type="submit" id="signup-btn" class="btn tw-w-full tw-justify-center tw-text-lg tw-py-4">
+                            <span id="signup-btn-text" data-i18n="signup.submit">Start Free Pilot</span>
+                            <span id="signup-btn-spinner" class="tw-hidden">
+                                <i class="bi bi-arrow-repeat tw-animate-spin tw-mr-2"></i>
+                                <span data-i18n="signup.submitting">Creating account...</span>
+                            </span>
+                        </button>
+                    </form>
+
+                    <div class="tw-mt-8">
+                        <div class="tw-relative">
+                            <div class="tw-absolute tw-inset-0 tw-flex tw-items-center">
+                                <div class="tw-w-full tw-border-t tw-border-gray-200"></div>
+                            </div>
+                            <div class="tw-relative tw-flex tw-justify-center tw-text-sm">
+                                <span class="tw-px-3 tw-bg-white tw-text-gray-500 tw-font-medium" data-i18n="signup.or">Or sign up with</span>
+                            </div>
+                        </div>
+
+                        <div class="tw-mt-6 tw-grid tw-grid-cols-2 tw-gap-4">
+                            <button type="button" onclick="socialLogin('google')" class="tw-flex tw-items-center tw-justify-center tw-px-4 tw-py-3 tw-border-2 tw-border-gray-200 tw-rounded-lg tw-bg-white tw-text-sm tw-font-semibold tw-text-gray-700 hover:tw-border-brand-blue hover:tw-bg-blue-50 tw-transition-all tw-duration-300">
+                                <i class="bi bi-google tw-text-lg tw-mr-2"></i>
+                                <span data-i18n="signup.google">Google</span>
+                            </button>
+                            <button type="button" onclick="socialLogin('microsoft')" class="tw-flex tw-items-center tw-justify-center tw-px-4 tw-py-3 tw-border-2 tw-border-gray-200 tw-rounded-lg tw-bg-white tw-text-sm tw-font-semibold tw-text-gray-700 hover:tw-border-brand-blue hover:tw-bg-blue-50 tw-transition-all tw-duration-300">
+                                <i class="bi bi-microsoft tw-text-lg tw-mr-2"></i>
+                                <span data-i18n="signup.microsoft">Microsoft</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <p class="tw-mt-8 tw-text-center tw-text-sm tw-text-gray-600">
+                        <span data-i18n="signup.hasaccount">Already have an account?</span>
+                        <a href="login.html" class="tw-font-bold tw-text-brand-blue hover:tw-underline" data-i18n="signup.signin">
+                            Sign in
+                        </a>
+                    </p>
+
+                    <!-- Trust Badges -->
+                    <div class="tw-mt-8 tw-pt-6 tw-border-t tw-border-gray-100">
+                        <div class="tw-flex tw-items-center tw-justify-center tw-gap-6 tw-flex-wrap tw-text-xs tw-text-gray-500">
+                            <div class="tw-flex tw-items-center tw-gap-2">
+                                <i class="bi bi-shield-check tw-text-brand-green tw-text-lg"></i>
+                                <span data-i18n="signup.trust.ssl">256-bit SSL</span>
+                            </div>
+                            <div class="tw-flex tw-items-center tw-gap-2">
+                                <i class="bi bi-lock-fill tw-text-brand-green tw-text-lg"></i>
+                                <span data-i18n="signup.trust.soc2">SOC 2 In Progress</span>
+                            </div>
+                            <div class="tw-flex tw-items-center tw-gap-2">
+                                <i class="bi bi-patch-check-fill tw-text-brand-green tw-text-lg"></i>
+                                <span data-i18n="signup.trust.gdpr">GDPR-Aligned</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tw-mt-6 tw-text-center tw-text-sm tw-text-gray-600">
+                    <a href="index.html" class="hover:tw-text-brand-blue tw-transition-colors tw-font-medium" data-i18n="signup.back">
+                        <i class="bi bi-arrow-left tw-mr-1"></i> Back to home
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <script src="./translations.js"></script>
+        <script src="./i18n.js"></script>
+        <script src="./index.js"></script>
+        <script src="./auth.js"></script>
+        <script>
+            // Check if user came from social login
+            const urlParams = new URLSearchParams(window.location.search);
+            const provider = urlParams.get('provider');
+            
+            if (provider) {
+                const providerName = provider.charAt(0).toUpperCase() + provider.slice(1);
+                const messageDiv = document.getElementById('signup-message');
+                
+                if (messageDiv) {
+                    messageDiv.classList.remove('tw-hidden');
+                    messageDiv.classList.add('tw-bg-blue-100', 'tw-text-blue-700', 'tw-border', 'tw-border-blue-300');
+                    messageDiv.innerHTML = `<i class="bi bi-info-circle tw-mr-2"></i>In a production environment, you would be authenticated via ${providerName}. For this demo, please complete the signup form below.`;
+                }
+                
+                // Clean up URL
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }
+        </script>
+    </body>
+</html>

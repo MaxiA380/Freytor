@@ -1,0 +1,97 @@
+<header
+    class="tw-absolute tw-top-0 tw-z-20 tw-flex tw-h-[80px] tw-w-full tw-bg-white/95 tw-backdrop-blur-md tw-px-[10%] tw-text-black tw-shadow-sm tw-border-b tw-border-gray-100 max-lg:tw-mr-auto max-lg:tw-px-4 lg:tw-justify-around header-glass"
+>
+    <a class="tw-flex tw-h-[80px] tw-w-[160px] tw-place-items-center tw-transition-transform hover:tw-scale-105" href="index.html">
+        <img
+            src="./assets/logo/freytor-logo.png"
+            alt="Freytor logo"
+            class="tw-h-full tw-w-full tw-object-contain"
+        />
+    </a>
+    <div
+        class="collapsible-header animated-collapse max-lg:tw-shadow-md"
+        id="collapsed-header-items"
+    >
+        <div
+            class="tw-flex tw-h-full tw-w-max tw-gap-8 tw-text-base tw-text-gray-700 tw-font-medium max-lg:tw-mt-8 max-lg:tw-flex-col max-lg:tw-place-items-end max-lg:tw-gap-6 lg:tw-mx-auto lg:tw-place-items-center"
+        >
+            <a class="header-links tw-relative" href="about.html" data-i18n="nav.about">About us</a>
+            <a class="header-links tw-relative" href="pricing.html" data-i18n="nav.pricing">Pricing</a>
+            <a class="header-links tw-relative" href="contact.html" data-i18n="nav.contact">Contact us</a>
+        </div>
+        <div
+            class="tw-flex tw-place-items-center tw-gap-6 tw-text-base max-md:tw-w-full max-md:tw-flex-col max-md:tw-place-content-center"
+        >
+            <!-- Language Switcher -->
+            <div class="tw-relative language-switcher">
+                <button
+                    id="language-button"
+                    class="tw-flex tw-items-center tw-gap-2 tw-px-3 tw-py-2 tw-rounded-lg tw-border tw-border-gray-200 tw-bg-white tw-shadow-sm tw-transition-all tw-duration-300 hover:tw-border-brand-blue hover:tw-shadow-md hover:tw-scale-105"
+                    aria-label="Select language"
+                    onclick="toggleLanguageMenu(event)"
+                    type="button"
+                >
+                    <i class="bi bi-globe tw-text-lg"></i>
+                    <span id="current-language" class="tw-text-sm tw-font-medium">🇬🇧 English</span>
+                    <i class="bi bi-chevron-down tw-text-xs"></i>
+                </button>
+                <div
+                    id="language-menu"
+                    class="tw-absolute tw-right-0 tw-mt-2 tw-w-48 tw-bg-white tw-rounded-lg tw-shadow-lg tw-border tw-border-gray-200 tw-overflow-hidden tw-hidden"
+                    style="z-index: 9999;"
+                >
+                    <button
+                        class="tw-w-full tw-px-4 tw-py-3 tw-text-left tw-flex tw-items-center tw-gap-3 tw-transition-colors hover:tw-bg-blue-50"
+                        data-lang="en"
+                        onclick="changeLanguage('en')"
+                        type="button"
+                    >
+                        <span class="tw-text-2xl">🇬🇧</span>
+                        <span class="tw-font-medium">English</span>
+                    </button>
+                    <button
+                        class="tw-w-full tw-px-4 tw-py-3 tw-text-left tw-flex tw-items-center tw-gap-3 tw-transition-colors hover:tw-bg-blue-50"
+                        data-lang="de"
+                        onclick="changeLanguage('de')"
+                        type="button"
+                    >
+                        <span class="tw-text-2xl">🇩🇪</span>
+                        <span class="tw-font-medium">Deutsch</span>
+                    </button>
+                    <button
+                        class="tw-w-full tw-px-4 tw-py-3 tw-text-left tw-flex tw-items-center tw-gap-3 tw-transition-colors hover:tw-bg-blue-50"
+                        data-lang="es"
+                        onclick="changeLanguage('es')"
+                        type="button"
+                    >
+                        <span class="tw-text-2xl">🇪🇸</span>
+                        <span class="tw-font-medium">Español</span>
+                    </button>
+                </div>
+            </div>
+            
+            <a
+                href="login.html"
+                aria-label="login"
+                class="tw-font-medium tw-text-gray-700 tw-transition-all tw-duration-300 hover:tw-text-brand-blue"
+                data-i18n="nav.login"
+            >
+                Login
+            </a>
+            <a
+                href="signup.html"
+                aria-label="signup"
+                class="tw-rounded-lg tw-bg-gradient-to-r tw-from-brand-blue tw-to-brand-blue-light tw-px-5 tw-py-2.5 tw-font-semibold tw-text-white tw-shadow-md tw-transition-all tw-duration-300 hover:tw-shadow-lg hover:tw-scale-105 hover:tw-from-brand-blue-dark hover:tw-to-brand-blue"
+                data-i18n="nav.signup"
+            >
+                Free Pilot
+            </a>
+        </div>
+    </div>
+    <button
+        class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-black lg:tw-hidden"
+        onclick="toggleHeader()"
+        aria-label="menu"
+        id="collapse-btn"
+    ></button>
+</header>

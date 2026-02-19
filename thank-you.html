@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Welcome to Freytor!</title>
+        <meta name="description" content="Welcome to Freytor! Your account has been created. Get started with your logistics management dashboard." />
+        <link rel="shortcut icon" href="./assets/logo/logo.png" type="image/x-icon" />
+        
+        <!-- Plausible Analytics -->
+        <script defer data-domain="freytor.com" src="https://plausible.io/js/script.js"></script>
+        
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="./tailwind.config.js"></script>
+        <link rel="stylesheet" href="./css/index.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+            integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <style>
+            @keyframes checkmark {
+                0% { transform: scale(0); opacity: 0; }
+                50% { transform: scale(1.2); }
+                100% { transform: scale(1); opacity: 1; }
+            }
+            @keyframes fadeInUp {
+                0% { transform: translateY(20px); opacity: 0; }
+                100% { transform: translateY(0); opacity: 1; }
+            }
+            @keyframes confetti {
+                0% { transform: translateY(-100%) rotate(0deg); opacity: 1; }
+                100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+            }
+            .animate-checkmark { animation: checkmark 0.5s ease-out forwards; }
+            .animate-fade-in-up { animation: fadeInUp 0.6s ease-out forwards; }
+            .animate-fade-in-up-delay-1 { animation: fadeInUp 0.6s ease-out 0.2s forwards; opacity: 0; }
+            .animate-fade-in-up-delay-2 { animation: fadeInUp 0.6s ease-out 0.4s forwards; opacity: 0; }
+            .confetti {
+                position: fixed;
+                width: 10px;
+                height: 10px;
+                top: -10px;
+                animation: confetti 3s ease-out forwards;
+            }
+        </style>
+    </head>
+    <body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-gradient-to-br tw-from-white tw-via-green-50/30 tw-to-blue-50/30">
+        <a href="#main-content" class="skip-to-content">Skip to main content</a>
+        
+        <!-- Header Component -->
+        <div id="header-component"></div>
+
+        <main id="main-content" class="tw-flex tw-flex-1 tw-items-center tw-justify-center tw-px-4 tw-py-16">
+            <div class="tw-text-center tw-max-w-[700px]">
+                <!-- Success Checkmark -->
+                <div class="tw-mb-8">
+                    <div class="tw-inline-flex tw-h-24 tw-w-24 tw-place-items-center tw-place-content-center tw-rounded-full tw-bg-green-100 animate-checkmark">
+                        <i class="bi bi-check-lg tw-text-5xl tw-text-brand-green"></i>
+                    </div>
+                </div>
+
+                <h1 class="tw-text-4xl lg:tw-text-5xl tw-font-bold tw-mb-4 tw-text-gray-900 animate-fade-in-up">
+                    <span data-i18n="thankyou.title1">Welcome to</span> <span class="tw-text-brand-green" data-i18n="thankyou.title2">Freytor!</span>
+                </h1>
+                
+                <p class="tw-text-lg tw-text-gray-600 tw-mb-8 tw-leading-relaxed animate-fade-in-up-delay-1" data-i18n="thankyou.subtitle">
+                    Your account has been created successfully. We've sent a verification email to your inbox. 
+                    Please verify your email to unlock all features.
+                </p>
+
+                <!-- Next Steps Card -->
+                <div class="tw-bg-white tw-rounded-2xl tw-shadow-lg tw-p-8 tw-border tw-border-gray-100 tw-mb-8 tw-text-left animate-fade-in-up-delay-2">
+                    <h2 class="tw-text-xl tw-font-bold tw-text-gray-800 tw-mb-6">
+                        <i class="bi bi-list-check tw-mr-2 tw-text-brand-blue"></i>
+                        <span data-i18n="thankyou.steps.title">Get Started in 3 Easy Steps</span>
+                    </h2>
+                    
+                    <div class="tw-space-y-4">
+                        <div class="tw-flex tw-items-start tw-gap-4 tw-p-4 tw-rounded-lg tw-bg-green-50 tw-border tw-border-green-200">
+                            <div class="tw-flex tw-h-8 tw-w-8 tw-flex-shrink-0 tw-place-items-center tw-place-content-center tw-rounded-full tw-bg-brand-green tw-text-white tw-font-bold">
+                                1
+                            </div>
+                            <div>
+                                <h3 class="tw-font-semibold tw-text-gray-800" data-i18n="thankyou.step1.title">Verify Your Email</h3>
+                                <p class="tw-text-sm tw-text-gray-600" data-i18n="thankyou.step1.desc">Check your inbox and click the verification link we sent you.</p>
+                            </div>
+                            <i class="bi bi-envelope-check tw-text-brand-green tw-text-xl tw-ml-auto"></i>
+                        </div>
+
+                        <div class="tw-flex tw-items-start tw-gap-4 tw-p-4 tw-rounded-lg tw-bg-blue-50 tw-border tw-border-blue-200">
+                            <div class="tw-flex tw-h-8 tw-w-8 tw-flex-shrink-0 tw-place-items-center tw-place-content-center tw-rounded-full tw-bg-brand-blue tw-text-white tw-font-bold">
+                                2
+                            </div>
+                            <div>
+                                <h3 class="tw-font-semibold tw-text-gray-800" data-i18n="thankyou.step2.title">Connect Your Carriers</h3>
+                                <p class="tw-text-sm tw-text-gray-600" data-i18n="thankyou.step2.desc">Link your shipping accounts to start tracking in one place.</p>
+                            </div>
+                            <i class="bi bi-truck tw-text-brand-blue tw-text-xl tw-ml-auto"></i>
+                        </div>
+
+                        <div class="tw-flex tw-items-start tw-gap-4 tw-p-4 tw-rounded-lg tw-bg-gray-50 tw-border tw-border-gray-200">
+                            <div class="tw-flex tw-h-8 tw-w-8 tw-flex-shrink-0 tw-place-items-center tw-place-content-center tw-rounded-full tw-bg-gray-500 tw-text-white tw-font-bold">
+                                3
+                            </div>
+                            <div>
+                                <h3 class="tw-font-semibold tw-text-gray-800" data-i18n="thankyou.step3.title">Start Shipping Smarter</h3>
+                                <p class="tw-text-sm tw-text-gray-600" data-i18n="thankyou.step3.desc">Create your first shipment and experience the magic!</p>
+                            </div>
+                            <i class="bi bi-magic tw-text-gray-500 tw-text-xl tw-ml-auto"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="tw-flex tw-flex-wrap tw-gap-4 tw-justify-center tw-mb-8">
+                    <a href="login.html" class="btn tw-text-lg tw-px-8 tw-py-4">
+                        <i class="bi bi-box-arrow-in-right tw-mr-2"></i>
+                        <span data-i18n="thankyou.login">Go to Login</span>
+                    </a>
+                    <a href="faq.html" class="tw-flex tw-items-center tw-gap-2 tw-px-8 tw-py-4 tw-border-2 tw-border-gray-300 tw-rounded-lg tw-font-medium tw-text-gray-700 tw-transition-all hover:tw-border-brand-blue hover:tw-text-brand-blue">
+                        <i class="bi bi-question-circle"></i>
+                        <span data-i18n="thankyou.faq">View FAQ</span>
+                    </a>
+                </div>
+
+                <!-- Support Note -->
+                <p class="tw-text-sm tw-text-gray-500">
+                    <span data-i18n="thankyou.noemail">Didn't receive the email? Check your spam folder or</span> 
+                    <a href="contact.html" class="tw-text-brand-blue hover:tw-underline" data-i18n="thankyou.contact">contact support</a>.
+                </p>
+            </div>
+        </main>
+
+        <!-- Footer Component -->
+        <div id="footer-component"></div>
+
+        <script src="./translations.js"></script>
+        <script src="./i18n.js"></script>
+        <script src="./index.js"></script>
+        <script src="./components/components.js"></script>
+        
+        <!-- Confetti Effect -->
+        <script>
+            // Create confetti on page load
+            const colors = ['#1A5BAB', '#3EA344', '#FFD700', '#FF6B6B', '#4ECDC4'];
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.left = Math.random() * 100 + 'vw';
+                    confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                    confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+                    document.body.appendChild(confetti);
+                    
+                    setTimeout(() => confetti.remove(), 4000);
+                }, i * 50);
+            }
+        </script>
+    </body>
+</html>

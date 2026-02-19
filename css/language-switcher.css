@@ -1,0 +1,51 @@
+/* Language Switcher Styles */
+.language-switcher {
+    position: relative;
+    z-index: 50;
+}
+
+.language-switcher #language-menu {
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+    transform-origin: top right;
+}
+
+.language-switcher #language-menu.tw-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-10px) scale(0.95);
+}
+
+.language-switcher #language-menu:not(.tw-hidden) {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    transform: translateY(0) scale(1);
+}
+
+.active-language {
+    background-color: #EFF6FF !important;
+    border-left: 3px solid #1A5BAB !important;
+}
+
+.active-language span:last-child {
+    color: #1A5BAB;
+    font-weight: 600;
+}
+
+/* Ensure language menu appears above other elements */
+#language-menu {
+    z-index: 9999 !important;
+    min-width: 12rem;
+}
+
+/* Hover effects for language options */
+.language-switcher button[data-lang] {
+    cursor: pointer;
+    border: none;
+    background: transparent;
+}
+
+.language-switcher button[data-lang]:active {
+    background-color: #DBEAFE !important;
+}

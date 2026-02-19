@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact Us - Freytor</title>
+        <meta name="description" content="Get in touch with Freytor. Contact our sales or support team for questions about our logistics management platform." />
+        <link rel="shortcut icon" href="./assets/logo/logo.png" type="image/x-icon" />
+        
+        <!-- Plausible Analytics -->
+        <script defer data-domain="freytor.com" src="https://plausible.io/js/script.js"></script>
+        
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="./tailwind.config.js"></script>
+        <link rel="stylesheet" href="./css/index.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+            integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#ffffff]">
+        <a href="#main-content" class="skip-to-content">Skip to main content</a>
+        
+        <!-- Header Component -->
+        <div id="header-component"></div>
+
+        <main id="main-content" class="tw-relative tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden tw-bg-gradient-to-br tw-from-white tw-via-blue-50/30 tw-to-green-50/30 tw-pt-[100px] tw-px-[10%] tw-pb-12 max-md:tw-px-4 max-md:tw-pb-8">
+            <div class="tw-mx-auto tw-max-w-[1200px] tw-w-full tw-pb-12">
+                <h1 class="tw-text-6xl tw-font-bold tw-mb-6 tw-text-center tw-leading-[1.2] max-md:tw-text-4xl" data-i18n="contact.hero.title">
+                    Get in <span class="tw-text-brand-blue">Touch</span>
+                </h1>
+                <p class="tw-text-center tw-text-gray-700 tw-text-xl tw-mb-4 tw-max-w-[800px] tw-mx-auto tw-leading-relaxed" data-i18n="contact.hero.subtitle">
+                    Have questions? We'd love to hear from you. Book a guided onboarding call, request your free pilot, or just chat with our team.
+                </p>
+                <p class="tw-text-center tw-text-gray-600 tw-text-base tw-mb-4">
+                    <span data-i18n="contact.hero.response">Typical response time:</span> <span class="tw-font-semibold tw-text-brand-green" data-i18n="contact.hero.response.time">Under 2 hours</span> <span data-i18n="contact.hero.response.hours">during business hours</span>
+                </p>
+                <div class="tw-flex tw-flex-wrap tw-justify-center tw-gap-2 tw-mb-12">
+                    <span class="tw-inline-flex tw-items-center tw-gap-1.5 tw-bg-green-100 tw-text-green-700 tw-px-3 tw-py-1.5 tw-rounded-full tw-text-xs tw-font-bold tw-border tw-border-green-200"><i class="bi bi-telephone"></i> <span data-i18n="contact.hero.badge1">Guided Onboarding Call</span></span>
+                    <span class="tw-inline-flex tw-items-center tw-gap-1.5 tw-bg-blue-100 tw-text-blue-700 tw-px-3 tw-py-1.5 tw-rounded-full tw-text-xs tw-font-bold tw-border tw-border-blue-200"><i class="bi bi-gift"></i> <span data-i18n="contact.hero.badge2">20 Shipments Imported Free</span></span>
+                    <span class="tw-inline-flex tw-items-center tw-gap-1.5 tw-bg-purple-100 tw-text-purple-700 tw-px-3 tw-py-1.5 tw-rounded-full tw-text-xs tw-font-bold tw-border tw-border-purple-200"><i class="bi bi-cpu"></i> <span data-i18n="contact.hero.badge3">Zero Hardware Required</span></span>
+                </div>
+
+                <div class="tw-grid tw-grid-cols-1 lg:tw-grid-cols-2 tw-gap-12">
+                    <!-- Contact Form -->
+                    <div class="tw-bg-white tw-rounded-xl tw-shadow-lg tw-p-8 tw-border-2 tw-border-blue-100 tw-transition-all tw-duration-300 hover:tw-border-brand-blue hover:tw-shadow-xl">
+                        <div class="tw-flex tw-items-center tw-gap-3 tw-mb-6">
+                            <div class="tw-flex tw-h-12 tw-w-12 tw-place-items-center tw-place-content-center tw-rounded-full tw-bg-blue-100">
+                                <i class="bi bi-envelope tw-text-2xl tw-text-brand-blue"></i>
+                            </div>
+                            <h2 class="tw-text-3xl tw-font-bold tw-text-brand-blue" data-i18n="contact.form.title">Send us a Message</h2>
+                        </div>
+                    <form id="contact-form" action="https://formsubmit.co/1632ca8c2a91e7abebfce80c7a8fe05a" method="POST" class="tw-space-y-5">
+                            <!-- FormSubmit Configuration -->
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_next" value="https://maxia380.github.io/thank-you.html">
+                            <input type="hidden" name="_subject" value="New Contact Form Submission - Freytor">
+                            <input type="text" name="_honey" style="display:none">
+                            
+                            <div>
+                                <label class="tw-block tw-text-sm tw-font-semibold tw-text-gray-700 tw-mb-2" data-i18n="contact.form.name">Full Name *</label>
+                                <input 
+                                    type="text"
+                                    name="name"
+                                    required
+                                    class="input tw-w-full tw-rounded-lg"
+                                    placeholder="John Doe"
+                                    data-i18n-placeholder="contact.form.name.placeholder"
+                                />
+                            </div>
+
+                            <div>
+                                <label class="tw-block tw-text-sm tw-font-semibold tw-text-gray-700 tw-mb-2" data-i18n="contact.form.email">Email *</label>
+                                <input 
+                                    type="email"
+                                    name="email"
+                                    required
+                                    class="input tw-w-full tw-rounded-lg"
+                                    placeholder="john@example.com"
+                                    data-i18n-placeholder="contact.form.email.placeholder"
+                                />
+                            </div>
+
+                            <div>
+                                <label class="tw-block tw-text-sm tw-font-semibold tw-text-gray-700 tw-mb-2" data-i18n="contact.form.company">Company</label>
+                                <input 
+                                    type="text"
+                                    name="company"
+                                    class="input tw-w-full tw-rounded-lg"
+                                    placeholder="Your Company"
+                                    data-i18n-placeholder="contact.form.company.placeholder"
+                                />
+                            </div>
+
+                            <div>
+                                <label class="tw-block tw-text-sm tw-font-semibold tw-text-gray-700 tw-mb-2" data-i18n="contact.form.subject">Subject *</label>
+                                <select 
+                                    required
+                                    name="subject"
+                                    class="input tw-w-full tw-rounded-lg"
+                                >
+                                    <option value="" data-i18n="contact.form.subject.select">Select a subject</option>
+                                    <option value="pilot" data-i18n="contact.form.subject.pilot">Request Free 30-Day Pilot</option>
+                                    <option value="sales" data-i18n="contact.form.subject.sales">Sales Inquiry / Demo</option>
+                                    <option value="onboarding" data-i18n="contact.form.subject.onboarding">Onboarding Help / CSV Import</option>
+                                    <option value="support" data-i18n="contact.form.subject.support">Technical Support</option>
+                                    <option value="billing" data-i18n="contact.form.subject.billing">Billing Question</option>
+                                    <option value="partnership" data-i18n="contact.form.subject.partnership">Partnership Opportunity</option>
+                                    <option value="other" data-i18n="contact.form.subject.other">Other</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="tw-block tw-text-sm tw-font-semibold tw-text-gray-700 tw-mb-2" data-i18n="contact.form.message">Message *</label>
+                                <textarea 
+                                    required
+                                    name="message"
+                                    rows="5"
+                                    class="input tw-w-full tw-rounded-lg tw-resize-none"
+                                    placeholder="Tell us how we can help..."
+                                    data-i18n-placeholder="contact.form.message.placeholder"
+                                ></textarea>
+                            </div>
+
+                            <!-- Success/Error Message -->
+                            <div id="contact-message" class="tw-hidden tw-p-4 tw-rounded-lg"></div>
+
+                            <button type="submit" id="contact-submit-btn" class="btn tw-w-full tw-justify-center tw-text-lg tw-py-4">
+                                <span id="contact-btn-text" data-i18n="contact.form.submit">Send Message</span>
+                                <span id="contact-btn-spinner" class="tw-hidden tw-flex tw-items-center tw-gap-2">
+                                    <i class="bi bi-arrow-repeat tw-animate-spin"></i>
+                                    <span data-i18n="contact.form.sending">Sending...</span>
+                                </span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="tw-space-y-6">
+                        <div class="tw-bg-white tw-rounded-xl tw-shadow-lg tw-p-8 tw-border-2 tw-border-green-100 tw-transition-all tw-duration-300 hover:tw-border-brand-green hover:tw-shadow-xl">
+                            <div class="tw-flex tw-items-center tw-gap-3 tw-mb-6">
+                                <div class="tw-flex tw-h-12 tw-w-12 tw-place-items-center tw-place-content-center tw-rounded-full tw-bg-green-100">
+                                    <i class="bi bi-info-circle tw-text-2xl tw-text-brand-green"></i>
+                                </div>
+                                <h2 class="tw-text-3xl tw-font-bold tw-text-brand-green" data-i18n="contact.info.title">Contact Information</h2>
+                            </div>
+                            
+                            <div class="tw-space-y-6">
+                                <div class="tw-flex tw-items-start tw-gap-4">
+                                    <div class="tw-bg-blue-100 tw-text-brand-blue tw-rounded-full tw-p-3 tw-mt-1 tw-flex-shrink-0">
+                                        <i class="bi bi-geo-alt-fill tw-text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="tw-font-bold tw-text-lg tw-mb-1 tw-text-gray-800" data-i18n="contact.info.address.title">Address</h3>
+                                        <p class="tw-text-gray-600 tw-leading-relaxed">
+                                            <span data-i18n="contact.info.address.line1">P.H. Colonial, Vía Israel</span><br/>
+                                            <span data-i18n="contact.info.address.line2">San Francisco</span><br/>
+                                            <span data-i18n="contact.info.address.line3">Panama City, Panama</span>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="tw-flex tw-items-start tw-gap-4">
+                                    <div class="tw-bg-green-100 tw-text-brand-green tw-rounded-full tw-p-3 tw-mt-1 tw-flex-shrink-0">
+                                        <i class="bi bi-envelope-fill tw-text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="tw-font-bold tw-text-lg tw-mb-1 tw-text-gray-800" data-i18n="contact.info.email.title">Email</h3>
+                                        <a href="mailto:support@freytor.com" class="tw-text-brand-blue hover:tw-underline tw-block">support@freytor.com</a>
+                                        <a href="mailto:sales@freytor.com" class="tw-text-brand-blue hover:tw-underline tw-block">sales@freytor.com</a>
+                                    </div>
+                                </div>
+
+                                <div class="tw-flex tw-items-start tw-gap-4">
+                                    <div class="tw-bg-blue-100 tw-text-brand-blue tw-rounded-full tw-p-3 tw-mt-1 tw-flex-shrink-0">
+                                        <i class="bi bi-telephone-fill tw-text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="tw-font-bold tw-text-lg tw-mb-1 tw-text-gray-800" data-i18n="contact.info.phone.title">Phone</h3>
+                                        <a href="tel:+50766393293" class="tw-text-brand-blue hover:tw-underline tw-block">+507 6639 3293</a>
+                                        <p class="tw-text-sm tw-text-gray-500 tw-mt-1" data-i18n="contact.info.phone.hours">Mon-Fri 9am-6pm EST</p>
+                                    </div>
+                                </div>
+
+                                <div class="tw-flex tw-items-start tw-gap-4">
+                                    <div class="tw-bg-green-100 tw-text-brand-green tw-rounded-full tw-p-3 tw-mt-1 tw-flex-shrink-0">
+                                        <i class="bi bi-clock-fill tw-text-xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="tw-font-bold tw-text-lg tw-mb-1 tw-text-gray-800" data-i18n="contact.info.hours.title">Business Hours</h3>
+                                        <p class="tw-text-gray-600" data-i18n="contact.info.hours.detail">Monday - Friday: 8:00 AM - 6:00 PM EST</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tw-bg-gradient-to-r tw-from-brand-blue tw-to-brand-green tw-rounded-xl tw-p-8 tw-text-white tw-shadow-lg">
+                            <div class="tw-flex tw-items-center tw-gap-3 tw-mb-4">
+                                <div class="tw-flex tw-h-12 tw-w-12 tw-place-items-center tw-place-content-center tw-rounded-full tw-bg-white/20">
+                                    <i class="bi bi-rocket-takeoff tw-text-2xl tw-text-white"></i>
+                                </div>
+                                <h3 class="tw-text-2xl tw-font-bold" data-i18n="contact.pilot.title">Start Your Free Pilot</h3>
+                            </div>
+                            <p class="tw-mb-4 tw-leading-relaxed" data-i18n="contact.pilot.desc">
+                                Get a 30-day free pilot with all features unlocked. We’ll import your first 20 shipments, give you a guided onboarding call, and show you the projected savings — no credit card required.
+                            </p>
+                            <ul class="tw-space-y-2 tw-mb-6 tw-text-white/90 tw-text-sm">
+                                <li class="tw-flex tw-items-center tw-gap-2"><i class="bi bi-check-circle-fill"></i> <span data-i18n="contact.pilot.item1">Guided onboarding call with our team</span></li>
+                                <li class="tw-flex tw-items-center tw-gap-2"><i class="bi bi-check-circle-fill"></i> <span data-i18n="contact.pilot.item2">First 20 shipments imported free</span></li>
+                                <li class="tw-flex tw-items-center tw-gap-2"><i class="bi bi-check-circle-fill"></i> <span data-i18n="contact.pilot.item3">Zero hardware — start in under 10 min</span></li>
+                                <li class="tw-flex tw-items-center tw-gap-2"><i class="bi bi-check-circle-fill"></i> <span data-i18n="contact.pilot.item4">1-click CSV &amp; WhatsApp import</span></li>
+                            </ul>
+                            <a href="signup.html" class="tw-inline-block tw-bg-white tw-text-brand-blue tw-px-8 tw-py-3 tw-rounded-lg tw-font-semibold tw-transition-all hover:tw-scale-105 hover:tw-shadow-xl" data-i18n="contact.pilot.cta">
+                                Start Free Pilot
+                            </a>
+                        </div>
+
+                        <div class="tw-bg-white tw-rounded-xl tw-shadow-lg tw-p-8 tw-border-2 tw-border-blue-100">
+                            <h3 class="tw-text-xl tw-font-bold tw-mb-4 tw-text-gray-800" data-i18n="contact.social.title">Follow Us</h3>
+                            <div class="tw-flex tw-gap-4">
+                                <a href="https://www.linkedin.com/company/freytor" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="tw-flex tw-h-14 tw-w-14 tw-place-items-center tw-place-content-center tw-rounded-full tw-bg-blue-100 tw-text-brand-blue tw-text-2xl tw-transition-all hover:tw-bg-brand-blue hover:tw-text-white hover:tw-scale-110">
+                                    <i class="bi bi-linkedin"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Section -->
+                <div class="tw-mt-12">
+                    <h2 class="tw-text-4xl tw-font-bold tw-mb-10 tw-text-center" data-i18n="contact.faq.title">
+                        Quick <span class="tw-text-brand-blue">answers</span>
+                    </h2>
+                    
+                    <div class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 tw-gap-6">
+                        <div class="tw-bg-white tw-p-6 tw-rounded-xl tw-shadow-lg tw-border-l-4 tw-border-brand-blue tw-transition-all tw-duration-300 hover:tw-shadow-xl">
+                            <h3 class="tw-font-bold tw-text-lg tw-mb-2 tw-text-gray-800">
+                                <i class="bi bi-question-circle tw-text-brand-blue tw-mr-2"></i>
+                                <span data-i18n="contact.faq.q1">How quickly will I get a response?</span>
+                            </h3>
+                            <p class="tw-text-gray-600 tw-leading-relaxed" data-i18n="contact.faq.a1">
+                                We typically respond within 2 hours during business hours (Mon-Fri, 9am-6pm GMT). For urgent technical issues, Enterprise customers get priority support.
+                            </p>
+                        </div>
+
+                        <div class="tw-bg-white tw-p-6 tw-rounded-xl tw-shadow-lg tw-border-l-4 tw-border-brand-green tw-transition-all tw-duration-300 hover:tw-shadow-xl">
+                            <h3 class="tw-font-bold tw-text-lg tw-mb-2 tw-text-gray-800">
+                                <i class="bi bi-question-circle tw-text-brand-green tw-mr-2"></i>
+                                <span data-i18n="contact.faq.q2">Can I schedule a call with the team?</span>
+                            </h3>
+                            <p class="tw-text-gray-600 tw-leading-relaxed" data-i18n="contact.faq.a2">
+                                Absolutely! Use the "Book a Demo" button above or mention your preferred time in the contact form, and we'll arrange a call that works for you.
+                            </p>
+                        </div>
+
+                        <div class="tw-bg-white tw-p-6 tw-rounded-xl tw-shadow-lg tw-border-l-4 tw-border-brand-blue tw-transition-all tw-duration-300 hover:tw-shadow-xl">
+                            <h3 class="tw-font-bold tw-text-lg tw-mb-2 tw-text-gray-800">
+                                <i class="bi bi-question-circle tw-text-brand-blue tw-mr-2"></i>
+                                <span data-i18n="contact.faq.q3">Do you offer phone support?</span>
+                            </h3>
+                            <p class="tw-text-gray-600 tw-leading-relaxed" data-i18n="contact.faq.a3">
+                                Yes! Phone support is available for all paid plans during business hours. Growth and Enterprise customers also have access to priority phone support.
+                            </p>
+                        </div>
+
+                        <div class="tw-bg-white tw-p-6 tw-rounded-xl tw-shadow-lg tw-border-l-4 tw-border-brand-green tw-transition-all tw-duration-300 hover:tw-shadow-xl">
+                            <h3 class="tw-font-bold tw-text-lg tw-mb-2 tw-text-gray-800">
+                                <i class="bi bi-question-circle tw-text-brand-green tw-mr-2"></i>
+                                <span data-i18n="contact.faq.q4">What if I need technical support?</span>
+                            </h3>
+                            <p class="tw-text-gray-600 tw-leading-relaxed" data-i18n="contact.faq.a4">
+                                Select "Technical Support" in the subject field above. Our technical team will prioritize your request and help resolve any issues quickly.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer Component -->
+        <div id="footer-component"></div>
+
+        <script src="./translations.js"></script>
+        <script src="./i18n.js"></script>
+        <script src="./index.js"></script>
+        <script src="./components/components.js"></script>
+        <script src="./auth.js"></script>
+        <script>
+            // Scroll to form when "Book a Demo" is clicked
+            function scrollToForm(e) {
+                e.preventDefault();
+                const form = document.getElementById('contact-form');
+                if (form) {
+                    form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    // Pre-select "Sales Inquiry" in the subject dropdown
+                    const subjectSelect = form.querySelector('select[name="subject"]');
+                    if (subjectSelect) {
+                        subjectSelect.value = 'sales';
+                    }
+                    // Focus on name field
+                    const nameInput = form.querySelector('input[name="name"]');
+                    if (nameInput) {
+                        setTimeout(() => nameInput.focus(), 500);
+                    }
+                }
+            }
+        </script>
+        
+        <!-- WhatsApp Floating Button -->
+        <a href="https://wa.me/50766393293?text=Hi%2C%20I%20need%20assistance" 
+           target="_blank"
+           rel="noopener noreferrer"
+           class="tw-fixed tw-bottom-6 tw-right-6 tw-z-50 tw-bg-green-500 hover:tw-bg-green-600 tw-text-white tw-rounded-full tw-p-4 tw-shadow-2xl hover:tw-scale-110 tw-transition-all tw-duration-300"
+           onclick="trackEvent('whatsapp_click', 'contact', 'contact_page')"
+           aria-label="Contact us on WhatsApp"
+           title="Chat with us on WhatsApp">
+            <i class="bi bi-whatsapp tw-text-3xl"></i>
+        </a>
+    </body>
+</html>

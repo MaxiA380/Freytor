@@ -1,0 +1,863 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://plausible.io https://cdn.paddle.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://plausible.io" />
+        <title>Pricing - Freytor</title>
+        <meta name="description" content="Freytor pricing plans starting at $19/month. Choose Starter, Growth, or Enterprise plans. 30-day free pilot, no credit card required. Guided onboarding included." />
+        <link rel="shortcut icon" href="./assets/logo/logo.png" type="image/x-icon" />
+        
+        <!-- Plausible Analytics -->
+        <script defer data-domain="freytor.com" src="https://plausible.io/js/script.js"></script>
+        
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="./tailwind.config.js"></script>
+        <link rel="stylesheet" href="./css/index.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+            integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <!-- Paddle.js -->
+        <script src="https://cdn.paddle.com/paddle/paddle.js"></script>
+        <style>
+            @keyframes pulse-glow {
+                0%, 100% { box-shadow: 0 0 5px rgba(62, 163, 68, 0.5), 0 0 10px rgba(26, 91, 171, 0.3); }
+                50% { box-shadow: 0 0 15px rgba(62, 163, 68, 0.8), 0 0 25px rgba(26, 91, 171, 0.5); }
+            }
+            .popular-badge { animation: pulse-glow 2s ease-in-out infinite; }
+            .price-value { transition: all 0.3s ease-in-out; }
+            .billing-text { transition: opacity 0.3s ease-in-out; }
+        </style>
+    </head>
+    <body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#ffffff]">
+        <a href="#main-content" class="skip-to-content">Skip to main content</a>
+        
+        <!-- Header Component -->
+        <div id="header-component"></div>
+
+        <main id="main-content" class="tw-relative tw-flex tw-min-h-[100vh] tw-w-full tw-flex-col tw-bg-gradient-to-br tw-from-white tw-via-blue-50/30 tw-to-green-50/30 tw-pt-[100px] tw-px-4 lg:tw-px-[5%] tw-pb-[80px]">
+            <div class="tw-mx-auto tw-max-w-[1400px] tw-w-full">
+                <div class="tw-text-center tw-mb-12">
+                    <h1 class="tw-text-5xl lg:tw-text-6xl tw-font-bold tw-mb-6 tw-leading-[1.2]" data-i18n-html="pricing.hero.title">
+                        Simple, <span class="tw-text-brand-blue">transparent</span> pricing
+                    </h1>
+                    <p class="tw-text-gray-700 tw-text-lg lg:tw-text-xl tw-mb-4 tw-max-w-[700px] tw-mx-auto tw-leading-relaxed" data-i18n="pricing.hero.subtitle">
+                        Start with a 30-day free pilot. We’ll import your first 20 shipments and show you the savings — no credit card, no hardware, no risk.
+                    </p>
+                    <div class="tw-flex tw-flex-wrap tw-justify-center tw-gap-2 tw-mb-4">
+                        <span class="tw-inline-flex tw-items-center tw-gap-1.5 tw-bg-green-100 tw-text-green-700 tw-px-3 tw-py-1.5 tw-rounded-full tw-text-xs tw-font-bold tw-border tw-border-green-200"><i class="bi bi-telephone"></i> <span data-i18n="pricing.hero.badge1">Guided Onboarding Call</span></span>
+                        <span class="tw-inline-flex tw-items-center tw-gap-1.5 tw-bg-blue-100 tw-text-blue-700 tw-px-3 tw-py-1.5 tw-rounded-full tw-text-xs tw-font-bold tw-border tw-border-blue-200"><i class="bi bi-upload"></i> <span data-i18n="pricing.hero.badge2">1-Click CSV &amp; WhatsApp Import</span></span>
+                        <span class="tw-inline-flex tw-items-center tw-gap-1.5 tw-bg-purple-100 tw-text-purple-700 tw-px-3 tw-py-1.5 tw-rounded-full tw-text-xs tw-font-bold tw-border tw-border-purple-200"><i class="bi bi-cpu"></i> <span data-i18n="pricing.hero.badge3">Zero Hardware Required</span></span>
+                    </div>
+                    <p class="tw-text-base tw-text-gray-600 tw-mb-8" data-i18n="pricing.hero.features">
+                        All plans include core tracking features • Cancel anytime • Upgrade or downgrade as you grow
+                    </p>
+                    <a href="signup.html" class="btn tw-inline-flex tw-text-lg tw-px-8 tw-py-4" data-i18n="pricing.cta.pilot">
+                        Start 30-Day Free Pilot
+                    </a>
+                </div>
+                
+                <!-- Savings Calculator -->
+                <div class="tw-bg-white tw-rounded-2xl tw-shadow-xl tw-p-6 lg:tw-p-8 tw-mb-8 tw-max-w-2xl tw-mx-auto tw-border-2 tw-border-blue-100">
+                    <div class="tw-text-center tw-mb-6">
+                        <div class="tw-inline-flex tw-items-center tw-justify-center tw-w-14 tw-h-14 tw-rounded-full tw-bg-blue-100 tw-mb-4">
+                            <i class="bi bi-calculator tw-text-3xl tw-text-brand-blue"></i>
+                        </div>
+                        <h3 class="tw-text-2xl lg:tw-text-3xl tw-font-bold tw-mb-2 tw-text-gray-900">💰 Calculate Your Savings</h3>
+                        <p class="tw-text-gray-600">See how much Freytor could save your business</p>
+                    </div>
+                    
+                    <div class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 tw-gap-4 tw-mb-6">
+                        <div>
+                            <label class="tw-block tw-text-sm tw-font-semibold tw-text-gray-700 tw-mb-2">
+                                <i class="bi bi-truck tw-mr-1"></i> Deliveries per month
+                            </label>
+                            <input type="number" id="calc-deliveries" value="100" min="10" max="10000" 
+                                   class="input tw-w-full tw-text-lg tw-font-semibold tw-text-center" 
+                                   onchange="calculateSavings()">
+                        </div>
+                        <div>
+                            <label class="tw-block tw-text-sm tw-font-semibold tw-text-gray-700 tw-mb-2">
+                                <i class="bi bi-currency-dollar tw-mr-1"></i> Current cost per delivery
+                            </label>
+                            <input type="number" id="calc-cost" value="15" min="1" max="1000" step="0.1" 
+                                   class="input tw-w-full tw-text-lg tw-font-semibold tw-text-center" 
+                                   onchange="calculateSavings()">
+                        </div>
+                    </div>
+                    
+                    <div class="tw-bg-gradient-to-br tw-from-green-50 tw-to-blue-50 tw-rounded-xl tw-p-6 tw-border-2 tw-border-green-200">
+                        <div class="tw-text-center">
+                            <p class="tw-text-sm tw-text-gray-600 tw-mb-2 tw-font-medium">Your Potential Monthly Savings</p>
+                            <p class="tw-text-4xl lg:tw-text-5xl tw-font-bold tw-text-green-600 tw-mb-2">
+                                $<span id="calc-result">525</span>
+                            </p>
+                            <p class="tw-text-sm tw-text-gray-600 tw-mb-4">
+                                <span class="tw-font-semibold tw-text-green-700">$<span id="calc-annual">6,300</span></span> saved annually
+                            </p>
+                            <div class="tw-flex tw-flex-wrap tw-justify-center tw-gap-2 tw-text-xs">
+                                <span class="tw-bg-white/70 tw-px-3 tw-py-1 tw-rounded-full tw-font-medium">
+                                    <i class="bi bi-check-circle-fill tw-text-green-600"></i> 10–15% fuel via routing
+                                </span>
+                                <span class="tw-bg-white/70 tw-px-3 tw-py-1 tw-rounded-full tw-font-medium">
+                                    <i class="bi bi-check-circle-fill tw-text-green-600"></i> Fewer re-deliveries via POD
+                                </span>
+                                <span class="tw-bg-white/70 tw-px-3 tw-py-1 tw-rounded-full tw-font-medium">
+                                    <i class="bi bi-info-circle tw-text-gray-500"></i> <a href="faq.html#savings" class="tw-underline tw-text-gray-600">See methodology</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Plan value note -->
+                <div class="tw-bg-blue-50 tw-border tw-border-blue-200 tw-rounded-xl tw-p-5 tw-mb-6 tw-text-center tw-max-w-2xl tw-mx-auto">
+                    <p class="tw-text-brand-blue tw-font-semibold tw-text-base tw-mb-1"><i class="bi bi-info-circle tw-mr-1"></i> How we keep prices low</p>
+                    <p class="tw-text-gray-600 tw-text-sm">Carrier updates use cached polling (30 min on Starter, 10 min on Growth) and push webhooks where available — so we pass infrastructure savings directly to you without sacrificing visibility.</p>
+                </div>
+
+                <div class="tw-flex tw-flex-col lg:tw-flex-row tw-justify-between lg:tw-justify-end tw-items-center tw-mb-8 tw-gap-4">
+                    <span class="tw-text-sm tw-text-gray-600 tw-font-medium" data-i18n="pricing.toggle.save">Save 10% with our annual plan</span>
+                    <div class="tw-flex tw-items-center tw-gap-2 tw-bg-white tw-rounded-full tw-p-1 tw-shadow-md">
+                        <button class="tw-px-6 tw-py-2 tw-rounded-full tw-transition-all tw-bg-brand-blue tw-text-white tw-font-semibold tw-text-sm" id="annual-btn" data-i18n="pricing.toggle.annual">
+                            ANNUAL
+                        </button>
+                        <button class="tw-px-6 tw-py-2 tw-rounded-full tw-transition-all tw-text-gray-600 tw-font-semibold tw-text-sm hover:tw-bg-gray-100" id="monthly-btn" data-i18n="pricing.toggle.monthly">
+                            MONTHLY
+                        </button>
+                    </div>
+                </div>
+
+                <div class="tw-grid tw-grid-cols-1 lg:tw-grid-cols-3 tw-gap-6 lg:tw-gap-8 tw-mb-8 tw-max-w-[1200px] tw-mx-auto">
+                    <!-- BASIC PLAN -->
+                    <div class="tw-bg-white tw-rounded-2xl tw-shadow-lg tw-p-6 lg:tw-p-8 tw-border-2 tw-border-blue-100 tw-transition-all tw-duration-300 hover:tw-border-brand-blue hover:tw-shadow-2xl hover:tw--translate-y-2">
+                        <div class="tw-text-center tw-mb-6">
+                            <div class="tw-flex tw-justify-center tw-mb-4">
+                                <div class="tw-flex tw-h-16 tw-w-16 tw-place-items-center tw-place-content-center tw-rounded-full tw-bg-blue-100">
+                                    <i class="bi bi-rocket-takeoff tw-text-3xl tw-text-brand-blue"></i>
+                                </div>
+                            </div>
+                            <h3 class="tw-text-sm lg:tw-text-base tw-font-bold tw-text-gray-700 tw-uppercase tw-tracking-wider tw-mb-4" data-i18n="pricing.starter.name">Starter</h3>
+                            <div class="tw-flex tw-items-start tw-justify-center tw-mb-2">
+                                <span class="tw-text-2xl tw-font-bold tw-text-brand-blue tw-mt-2">$</span>
+                                <span class="tw-text-6xl lg:tw-text-7xl tw-font-bold tw-text-brand-blue tw-leading-none price-value" data-annual="19" data-monthly="21">19</span>
+                            </div>
+                            <p class="tw-text-base tw-text-gray-600 tw-font-medium" data-i18n="pricing.permonth">per month</p>
+                            <p class="tw-text-sm tw-text-gray-500 tw-mt-1 billing-text" data-annual="billed annually at $228" data-monthly="billed monthly">billed annually at $228</p>
+                        </div>
+
+                        <p class="tw-text-xs tw-font-semibold tw-text-brand-blue tw-uppercase tw-tracking-wider tw-mb-3 tw-flex tw-items-center tw-gap-1.5"><i class="bi bi-box-seam"></i> <span data-i18n="pricing.starter.section">Core Logistics Essentials</span></p>
+                        <ul class="tw-space-y-3 tw-mb-8 tw-text-sm tw-text-gray-700">
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-0.5 tw-flex-shrink-0"></i>
+                                <span data-i18n-html="pricing.starter.f1"><strong>100 shipments/month</strong> — $0.15 per extra shipment</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-0.5 tw-flex-shrink-0"></i>
+                                <span data-i18n="pricing.starter.f2">Tracking updates every 30 min</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-0.5 tw-flex-shrink-0"></i>
+                                <span data-i18n="pricing.starter.f3">Basic route optimization (single driver)</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-0.5 tw-flex-shrink-0"></i>
+                                <span data-i18n="pricing.starter.f4">Basic delay & exception alerts (email)</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-0.5 tw-flex-shrink-0"></i>
+                                <span data-i18n="pricing.starter.f5">Basic KPI dashboard</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-0.5 tw-flex-shrink-0"></i>
+                                <span data-i18n="pricing.starter.f6">2 carrier accounts</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-0.5 tw-flex-shrink-0"></i>
+                                <span data-i18n="pricing.starter.f7">1 user seat &bull; 1 shipping location</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-0.5 tw-flex-shrink-0"></i>
+                                <span data-i18n="pricing.starter.f8">REST API access</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-0.5 tw-flex-shrink-0"></i>
+                                <span data-i18n="pricing.starter.f9">Email support</span>
+                            </li>
+                        </ul>
+
+                        <button onclick="openPaddleCheckout('growth', true)" class="btn tw-w-full tw-justify-center tw-py-3 tw-text-base tw-font-semibold popular-badge" data-i18n="pricing.cta.pilot">
+                            Start 30-Day Free Pilot
+                        </button>
+                    </div>
+
+                    <!-- GROWTH PLAN -->
+                    <div class="tw-bg-white tw-rounded-2xl tw-shadow-xl tw-p-6 lg:tw-p-8 tw-border-2 tw-border-brand-green tw-transition-all tw-duration-300 hover:tw-shadow-2xl hover:tw--translate-y-2 tw-relative tw-scale-100 lg:tw-scale-105">
+                        <div class="tw-absolute tw--top-4 tw-left-1/2 tw--translate-x-1/2 tw-bg-gradient-to-r tw-from-brand-blue tw-to-brand-green tw-text-white tw-px-8 tw-py-2 tw-rounded-full tw-text-xs tw-font-bold tw-shadow-lg tw-uppercase popular-badge">
+                            <i class="bi bi-star-fill tw-mr-1"></i> <span data-i18n="pricing.growth.badge">Most Popular</span>
+                        </div>
+                        <div class="tw-text-center tw-mb-6 tw-mt-2">
+                            <div class="tw-flex tw-justify-center tw-mb-4">
+                                <div class="tw-flex tw-h-16 tw-w-16 tw-place-items-center tw-place-content-center tw-rounded-full tw-bg-green-100">
+                                    <i class="bi bi-graph-up-arrow tw-text-3xl tw-text-brand-green"></i>
+                                </div>
+                            </div>
+                            <h3 class="tw-text-sm lg:tw-text-base tw-font-bold tw-text-gray-700 tw-uppercase tw-tracking-wider tw-mb-4" data-i18n="pricing.growth.name">Growth</h3>
+                            <div class="tw-flex tw-items-start tw-justify-center tw-mb-2">
+                                <span class="tw-text-2xl tw-font-bold tw-text-brand-green tw-mt-2">$</span>
+                                <span class="tw-text-6xl lg:tw-text-7xl tw-font-bold tw-text-brand-green tw-leading-none price-value" data-annual="39" data-monthly="43">39</span>
+                            </div>
+                            <p class="tw-text-base tw-text-gray-600 tw-font-medium" data-i18n="pricing.permonth">per month</p>
+                            <p class="tw-text-sm tw-text-gray-500 tw-mt-1 billing-text" data-annual="billed annually at $468" data-monthly="billed monthly">billed annually at $468</p>
+                        </div>
+
+                        <p class="tw-text-xs tw-font-semibold tw-text-brand-green tw-uppercase tw-tracking-wider tw-mb-3 tw-flex tw-items-center tw-gap-1.5"><i class="bi bi-lightning-charge-fill"></i> <span data-i18n="pricing.growth.section">Everything in Starter, plus:</span></p>
+                        <ul class="tw-space-y-3 tw-mb-8 tw-text-sm tw-text-gray-700">
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-0.5 tw-flex-shrink-0"></i>
+                                <span data-i18n-html="pricing.growth.f1"><strong>500 shipments/month</strong> — $0.10 per extra shipment</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-0.5 tw-flex-shrink-0"></i>
+                                <span data-i18n="pricing.growth.f2_tracking">Tracking updates every 10 min</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-0.5 tw-flex-shrink-0"></i>
+                                <span data-i18n-html="pricing.growth.f2"><strong>Proof of Delivery</strong> — photo, signature &amp; notes</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-0.5 tw-flex-shrink-0"></i>
+                                <span data-i18n-html="pricing.growth.f3"><strong>AI delay/exception alerts</strong> — WhatsApp, email &amp; SMS</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-0.5 tw-flex-shrink-0"></i>
+                                <span data-i18n-html="pricing.growth.f4"><strong>CVRP route optimization</strong> — capacity &amp; multi-stop</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-0.5 tw-flex-shrink-0"></i>
+                                <span data-i18n-html="pricing.growth.f5"><strong>Multi-driver dispatch</strong> &amp; service zones</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-0.5 tw-flex-shrink-0"></i>
+                                <span data-i18n-html="pricing.growth.f6"><strong>Driver mobile/PWA</strong> — navigation &amp; check-in</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-0.5 tw-flex-shrink-0"></i>
+                                <span data-i18n-html="pricing.growth.f7"><strong>Inventory tracking</strong> — SKU, stock &amp; reorder alerts</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-0.5 tw-flex-shrink-0"></i>
+                                <span data-i18n="pricing.growth.f8">Custom KPI dashboards &amp; in-app team notes</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-0.5 tw-flex-shrink-0"></i>
+                                <span data-i18n="pricing.growth.f9">Carrier rate/quote comparisons</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-0.5 tw-flex-shrink-0"></i>
+                                <span data-i18n="pricing.growth.f10">3 user seats &bull; 5 carrier accounts &bull; 5 locations</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-0.5 tw-flex-shrink-0"></i>
+                                <span data-i18n="pricing.growth.f11">REST API + Webhooks &bull; Priority support</span>
+                            </li>
+                        </ul>
+
+                        <button onclick="openPaddleCheckout('starter')" class="btn tw-w-full tw-justify-center tw-py-3 tw-text-base tw-font-semibold" data-i18n="pricing.cta.pilot">
+                            Start 30-Day Free Pilot
+                        </button>
+                    </div>
+
+                    <!-- PRO PLAN -->
+                    <div class="tw-bg-white tw-rounded-2xl tw-shadow-lg tw-p-6 lg:tw-p-8 tw-border-2 tw-border-blue-100 tw-transition-all tw-duration-300 hover:tw-border-brand-blue hover:tw-shadow-2xl hover:tw--translate-y-2">
+                        <div class="tw-text-center tw-mb-6">
+                            <div class="tw-flex tw-justify-center tw-mb-4">
+                                <div class="tw-flex tw-h-16 tw-w-16 tw-place-items-center tw-place-content-center tw-rounded-full tw-bg-blue-100">
+                                    <i class="bi bi-building tw-text-3xl tw-text-brand-blue"></i>
+                                </div>
+                            </div>
+                            <h3 class="tw-text-sm lg:tw-text-base tw-font-bold tw-text-gray-700 tw-uppercase tw-tracking-wider tw-mb-4" data-i18n="pricing.enterprise.name">Enterprise</h3>
+                            <div class="tw-flex tw-items-start tw-justify-center tw-mb-2">
+                                <span class="tw-text-2xl tw-font-bold tw-text-brand-blue tw-mt-2">$</span>
+                                <span class="tw-text-6xl lg:tw-text-7xl tw-font-bold tw-text-brand-blue tw-leading-none price-value" data-annual="79" data-monthly="89">79</span>
+                            </div>
+                            <p class="tw-text-base tw-text-gray-600 tw-font-medium" data-i18n="pricing.permonth">per month</p>
+                            <p class="tw-text-sm tw-text-gray-500 tw-mt-1 billing-text" data-annual="billed annually at $948" data-monthly="billed monthly">billed annually at $948</p>
+                        </div>
+
+                        <p class="tw-text-xs tw-font-semibold tw-text-brand-blue tw-uppercase tw-tracking-wider tw-mb-3 tw-flex tw-items-center tw-gap-1.5"><i class="bi bi-stars"></i> <span data-i18n="pricing.enterprise.section">Everything in Growth, plus:</span></p>
+                        <ul class="tw-space-y-3 tw-mb-8 tw-text-sm tw-text-gray-700">
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-0.5 tw-flex-shrink-0"></i>
+                                <span data-i18n-html="pricing.enterprise.f1"><strong>Unlimited shipments</strong> — no overage fees</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-0.5 tw-flex-shrink-0"></i>
+                                <span data-i18n="pricing.enterprise.f0_tracking">Real-time tracking updates (webhook-driven)</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-0.5 tw-flex-shrink-0"></i>
+                                <span data-i18n-html="pricing.enterprise.f2"><strong>Fleet management</strong> — vehicle registry, maintenance alerts</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-0.5 tw-flex-shrink-0"></i>
+                                <span data-i18n-html="pricing.enterprise.f3"><strong>Full CVRP solver</strong> — Google OR-Tools integration</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-0.5 tw-flex-shrink-0"></i>
+                                <span data-i18n-html="pricing.enterprise.f4"><strong>Sustainability routing</strong> — EV preference &amp; emissions tracking</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-0.5 tw-flex-shrink-0"></i>
+                                <span data-i18n-html="pricing.enterprise.f5"><strong>Workflow automation</strong> — threshold alerts &amp; triggers</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-0.5 tw-flex-shrink-0"></i>
+                                <span data-i18n-html="pricing.enterprise.f6"><strong>Exportable reports</strong> &amp; custom analytics</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-0.5 tw-flex-shrink-0"></i>
+                                <span data-i18n="pricing.enterprise.f7">Multi-warehouse &amp; multi-merchant management</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-0.5 tw-flex-shrink-0"></i>
+                                <span data-i18n="pricing.enterprise.f8">Custom carrier connectors</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-0.5 tw-flex-shrink-0"></i>
+                                <span data-i18n="pricing.enterprise.f9">Unlimited users &bull; Unlimited carriers &bull; Unlimited locations</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-0.5 tw-flex-shrink-0"></i>
+                                <span data-i18n="pricing.enterprise.f10">SSO (SAML 2.0) &bull; Dedicated account manager</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-0.5 tw-flex-shrink-0"></i>
+                                <span data-i18n="pricing.enterprise.f11">24/7 premium support</span>
+                            </li>
+                        </ul>
+
+                        <button onclick="openPaddleCheckout('enterprise')" class="btn tw-w-full tw-justify-center tw-py-3 tw-text-base tw-font-semibold" data-i18n="pricing.cta.pilot">
+                            Start 30-Day Free Pilot
+                        </button>
+                    </div>
+                </div>
+
+                <p class="tw-text-center tw-text-sm tw-text-gray-500 tw-mb-8" data-i18n="pricing.tax">
+                    All prices in USD and exclusive of taxes.
+                </p>
+
+                <!-- Money-back Guarantee Badge -->
+                <div class="tw-flex tw-justify-center tw-mb-12">
+                    <div class="tw-inline-flex tw-items-center tw-gap-3 tw-bg-green-50 tw-border-2 tw-border-green-200 tw-rounded-full tw-px-6 tw-py-3">
+                        <div class="tw-flex tw-h-10 tw-w-10 tw-place-items-center tw-place-content-center tw-rounded-full tw-bg-brand-green">
+                            <i class="bi bi-shield-check tw-text-white tw-text-lg"></i>
+                        </div>
+                        <div class="tw-text-left">
+                            <p class="tw-font-semibold tw-text-gray-800" data-i18n="pricing.guarantee.title">30-Day Money-Back Guarantee</p>
+                            <p class="tw-text-sm tw-text-gray-600" data-i18n="pricing.guarantee.desc">Not satisfied? Get a full refund, no questions asked.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Comparison Table -->
+        <section class="tw-w-full tw-bg-white tw-p-12 max-md:tw-p-8">
+            <div class="tw-mx-auto tw-max-w-[1400px]">
+                <div class="tw-text-center tw-mb-12">
+                    <h2 class="tw-text-4xl tw-font-bold tw-mb-4" data-i18n-html="pricing.compare.title">
+                        Compare <span class="tw-text-brand-blue">features</span>
+                    </h2>
+                    <p class="tw-text-gray-600 tw-text-lg" data-i18n="pricing.compare.subtitle">
+                        Find the perfect fit for your logistics needs
+                    </p>
+                </div>
+
+                <div class="tw-overflow-x-auto">
+                    <table class="tw-w-full tw-border-collapse">
+                        <thead>
+                            <tr class="tw-border-b-2 tw-border-gray-200">
+                                <th class="tw-text-left tw-p-4 tw-font-semibold tw-text-gray-700" data-i18n="pricing.compare.feature">Feature</th>
+                                <th class="tw-text-center tw-p-4 tw-font-semibold tw-text-brand-blue"><span data-i18n="pricing.starter.name">Starter</span> <span class="tw-block tw-text-xs tw-font-normal tw-text-gray-400" data-i18n="pricing.compare.starter.price">$19/mo</span></th>
+                                <th class="tw-text-center tw-p-4 tw-font-semibold tw-text-brand-green"><span data-i18n="pricing.growth.name">Growth</span> <span class="tw-block tw-text-xs tw-font-normal tw-text-gray-400" data-i18n="pricing.compare.growth.price">$39/mo</span></th>
+                                <th class="tw-text-center tw-p-4 tw-font-semibold tw-text-brand-blue"><span data-i18n="pricing.enterprise.name">Enterprise</span> <span class="tw-block tw-text-xs tw-font-normal tw-text-gray-400" data-i18n="pricing.compare.enterprise.price">$79/mo</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- SECTION: Shipment & Tracking -->
+                            <tr class="tw-bg-blue-50/60">
+                                <td colspan="4" class="tw-p-3 tw-pl-4 tw-font-bold tw-text-brand-blue tw-text-xs tw-uppercase tw-tracking-wider"><i class="bi bi-truck tw-mr-1"></i> <span data-i18n="pricing.compare.section1">Shipment &amp; Tracking</span></td>
+                            </tr>
+                            <tr class="tw-border-b tw-border-gray-100">
+                                <td class="tw-p-4 tw-text-gray-700" data-i18n="pricing.compare.row1.name">Monthly shipments (overage rate)</td>
+                                <td class="tw-p-4 tw-text-center tw-text-sm" data-i18n="pricing.compare.row1.starter">100 &nbsp;<span class="tw-text-gray-400">(+$0.15/extra)</span></td>
+                                <td class="tw-p-4 tw-text-center tw-font-semibold tw-text-sm" data-i18n="pricing.compare.row1.growth">500 &nbsp;<span class="tw-text-gray-400">(+$0.10/extra)</span></td>
+                                <td class="tw-p-4 tw-text-center tw-font-semibold" data-i18n="pricing.compare.row1.enterprise">Unlimited</td>
+                            </tr>
+                            <tr class="tw-border-b tw-border-gray-100 tw-bg-gray-50">
+                                <td class="tw-p-4 tw-text-gray-700" data-i18n="pricing.compare.row2.name">Tracking update frequency</td>
+                                <td class="tw-p-4 tw-text-center tw-text-gray-600 tw-text-sm" data-i18n="pricing.compare.row2.starter">Every 30 min</td>
+                                <td class="tw-p-4 tw-text-center tw-font-semibold tw-text-sm" data-i18n="pricing.compare.row2.growth">Every 10 min</td>
+                                <td class="tw-p-4 tw-text-center tw-font-semibold tw-text-sm tw-text-brand-green" data-i18n="pricing.compare.row2.enterprise">Real-time (webhooks)</td>
+                            </tr>
+                            <tr class="tw-border-b tw-border-gray-100">
+                                <td class="tw-p-4 tw-text-gray-700" data-i18n="pricing.compare.row3.name">Proof of Delivery (photo, signature, notes)</td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-dash tw-text-gray-400 tw-text-xl"></i></td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-check-lg tw-text-brand-green tw-text-xl"></i></td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-check-lg tw-text-brand-green tw-text-xl"></i></td>
+                            </tr>
+                            <tr class="tw-border-b tw-border-gray-100 tw-bg-gray-50">
+                                <td class="tw-p-4 tw-text-gray-700" data-i18n="pricing.compare.row4.name">AI delay/exception alerts</td>
+                                <td class="tw-p-4 tw-text-center tw-text-gray-500" data-i18n="pricing.compare.row4.starter">Basic email</td>
+                                <td class="tw-p-4 tw-text-center tw-font-semibold" data-i18n="pricing.compare.row4.growth">WhatsApp + Email + SMS</td>
+                                <td class="tw-p-4 tw-text-center tw-font-semibold" data-i18n="pricing.compare.row4.enterprise">WhatsApp + Email + SMS</td>
+                            </tr>
+                            <tr class="tw-border-b tw-border-gray-100">
+                                <td class="tw-p-4 tw-text-gray-700" data-i18n="pricing.compare.row5.name">Carrier rate/quote comparisons</td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-dash tw-text-gray-400 tw-text-xl"></i></td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-check-lg tw-text-brand-green tw-text-xl"></i></td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-check-lg tw-text-brand-green tw-text-xl"></i></td>
+                            </tr>
+                            <tr class="tw-border-b tw-border-gray-100 tw-bg-gray-50">
+                                <td class="tw-p-4 tw-text-gray-700" data-i18n="pricing.compare.row6.name">Carrier integrations</td>
+                                <td class="tw-p-4 tw-text-center" data-i18n="pricing.compare.row6.starter">2 accounts</td>
+                                <td class="tw-p-4 tw-text-center" data-i18n="pricing.compare.row6.growth">5 accounts</td>
+                                <td class="tw-p-4 tw-text-center tw-font-semibold" data-i18n="pricing.compare.row6.enterprise">Unlimited + custom connectors</td>
+                            </tr>
+                            <tr class="tw-border-b tw-border-gray-100">
+                                <td class="tw-p-4 tw-text-gray-700" data-i18n="pricing.compare.row7.name">1-click CSV &amp; WhatsApp import</td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-check-lg tw-text-brand-green tw-text-xl"></i></td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-check-lg tw-text-brand-green tw-text-xl"></i></td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-check-lg tw-text-brand-green tw-text-xl"></i></td>
+                            </tr>
+                            <tr class="tw-border-b tw-border-gray-100 tw-bg-gray-50">
+                                <td class="tw-p-4 tw-text-gray-700" data-i18n="pricing.compare.row8.name">Guided onboarding call</td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-check-lg tw-text-brand-green tw-text-xl"></i></td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-check-lg tw-text-brand-green tw-text-xl"></i></td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-check-lg tw-text-brand-green tw-text-xl"></i></td>
+                            </tr>
+
+                            <!-- SECTION: Route Optimization -->
+                            <tr class="tw-bg-green-50/60">
+                                <td colspan="4" class="tw-p-3 tw-pl-4 tw-font-bold tw-text-brand-green tw-text-xs tw-uppercase tw-tracking-wider"><i class="bi bi-geo-alt tw-mr-1"></i> <span data-i18n="pricing.compare.section2">Route Optimization</span></td>
+                            </tr>
+                            <tr class="tw-border-b tw-border-gray-100">
+                                <td class="tw-p-4 tw-text-gray-700" data-i18n="pricing.compare.row9.name">Route optimization</td>
+                                <td class="tw-p-4 tw-text-center tw-text-gray-500" data-i18n="pricing.compare.row9.starter">Basic (single driver)</td>
+                                <td class="tw-p-4 tw-text-center tw-font-semibold" data-i18n="pricing.compare.row9.growth">CVRP (capacity + multi-stop)</td>
+                                <td class="tw-p-4 tw-text-center tw-font-semibold" data-i18n="pricing.compare.row9.enterprise">Full CVRP + OR-Tools solver</td>
+                            </tr>
+                            <tr class="tw-border-b tw-border-gray-100 tw-bg-gray-50">
+                                <td class="tw-p-4 tw-text-gray-700" data-i18n="pricing.compare.row10.name">Multi-driver dispatch &amp; service zones</td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-dash tw-text-gray-400 tw-text-xl"></i></td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-check-lg tw-text-brand-green tw-text-xl"></i></td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-check-lg tw-text-brand-green tw-text-xl"></i></td>
+                            </tr>
+                            <tr class="tw-border-b tw-border-gray-100">
+                                <td class="tw-p-4 tw-text-gray-700" data-i18n="pricing.compare.row11.name">Driver mobile/PWA (navigation + check-in)</td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-dash tw-text-gray-400 tw-text-xl"></i></td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-check-lg tw-text-brand-green tw-text-xl"></i></td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-check-lg tw-text-brand-green tw-text-xl"></i></td>
+                            </tr>
+                            <tr class="tw-border-b tw-border-gray-100 tw-bg-gray-50">
+                                <td class="tw-p-4 tw-text-gray-700" data-i18n="pricing.compare.row12.name">Sustainability / EV preference in routing</td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-dash tw-text-gray-400 tw-text-xl"></i></td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-dash tw-text-gray-400 tw-text-xl"></i></td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-check-lg tw-text-brand-green tw-text-xl"></i></td>
+                            </tr>
+
+                            <!-- SECTION: Inventory & Fleet -->
+                            <tr class="tw-bg-yellow-50/60">
+                                <td colspan="4" class="tw-p-3 tw-pl-4 tw-font-bold tw-text-yellow-700 tw-text-xs tw-uppercase tw-tracking-wider"><i class="bi bi-boxes tw-mr-1"></i> <span data-i18n="pricing.compare.section3">Inventory &amp; Fleet</span></td>
+                            </tr>
+                            <tr class="tw-border-b tw-border-gray-100">
+                                <td class="tw-p-4 tw-text-gray-700" data-i18n="pricing.compare.row13.name">Inventory / SKU tracking &amp; reorder alerts</td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-dash tw-text-gray-400 tw-text-xl"></i></td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-check-lg tw-text-brand-green tw-text-xl"></i></td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-check-lg tw-text-brand-green tw-text-xl"></i></td>
+                            </tr>
+                            <tr class="tw-border-b tw-border-gray-100 tw-bg-gray-50">
+                                <td class="tw-p-4 tw-text-gray-700" data-i18n="pricing.compare.row14.name">Fleet management (vehicle registry, maintenance)</td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-dash tw-text-gray-400 tw-text-xl"></i></td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-dash tw-text-gray-400 tw-text-xl"></i></td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-check-lg tw-text-brand-green tw-text-xl"></i></td>
+                            </tr>
+                            <tr class="tw-border-b tw-border-gray-100">
+                                <td class="tw-p-4 tw-text-gray-700" data-i18n="pricing.compare.row15.name">Multi-warehouse management</td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-dash tw-text-gray-400 tw-text-xl"></i></td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-dash tw-text-gray-400 tw-text-xl"></i></td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-check-lg tw-text-brand-green tw-text-xl"></i></td>
+                            </tr>
+                            <tr class="tw-border-b tw-border-gray-100 tw-bg-gray-50">
+                                <td class="tw-p-4 tw-text-gray-700" data-i18n="pricing.compare.row16.name">Contact/vendor directory &amp; ratings</td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-dash tw-text-gray-400 tw-text-xl"></i></td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-check-lg tw-text-brand-green tw-text-xl"></i></td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-check-lg tw-text-brand-green tw-text-xl"></i></td>
+                            </tr>
+
+                            <!-- SECTION: Analytics & Ops -->
+                            <tr class="tw-bg-purple-50/60">
+                                <td colspan="4" class="tw-p-3 tw-pl-4 tw-font-bold tw-text-purple-700 tw-text-xs tw-uppercase tw-tracking-wider"><i class="bi bi-graph-up tw-mr-1"></i> <span data-i18n="pricing.compare.section4">Analytics &amp; Operations</span></td>
+                            </tr>
+                            <tr class="tw-border-b tw-border-gray-100">
+                                <td class="tw-p-4 tw-text-gray-700" data-i18n="pricing.compare.row17.name">Analytics &amp; KPI dashboards</td>
+                                <td class="tw-p-4 tw-text-center tw-text-gray-500" data-i18n="pricing.compare.row17.starter">Basic</td>
+                                <td class="tw-p-4 tw-text-center tw-font-semibold" data-i18n="pricing.compare.row17.growth">Custom widgets</td>
+                                <td class="tw-p-4 tw-text-center tw-font-semibold" data-i18n="pricing.compare.row17.enterprise">Custom + exportable reports</td>
+                            </tr>
+                            <tr class="tw-border-b tw-border-gray-100 tw-bg-gray-50">
+                                <td class="tw-p-4 tw-text-gray-700" data-i18n="pricing.compare.row18.name">Workflow automation (threshold triggers)</td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-dash tw-text-gray-400 tw-text-xl"></i></td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-dash tw-text-gray-400 tw-text-xl"></i></td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-check-lg tw-text-brand-green tw-text-xl"></i></td>
+                            </tr>
+                            <tr class="tw-border-b tw-border-gray-100">
+                                <td class="tw-p-4 tw-text-gray-700" data-i18n="pricing.compare.row19.name">In-app team notes &amp; comments</td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-dash tw-text-gray-400 tw-text-xl"></i></td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-check-lg tw-text-brand-green tw-text-xl"></i></td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-check-lg tw-text-brand-green tw-text-xl"></i></td>
+                            </tr>
+
+                            <!-- SECTION: Platform & Support -->
+                            <tr class="tw-bg-blue-50/60">
+                                <td colspan="4" class="tw-p-3 tw-pl-4 tw-font-bold tw-text-brand-blue tw-text-xs tw-uppercase tw-tracking-wider"><i class="bi bi-gear tw-mr-1"></i> <span data-i18n="pricing.compare.section5">Platform &amp; Support</span></td>
+                            </tr>
+                            <tr class="tw-border-b tw-border-gray-100">
+                                <td class="tw-p-4 tw-text-gray-700" data-i18n="pricing.compare.row20.name">User seats</td>
+                                <td class="tw-p-4 tw-text-center" data-i18n="pricing.compare.row20.starter">1</td>
+                                <td class="tw-p-4 tw-text-center" data-i18n="pricing.compare.row20.growth">3</td>
+                                <td class="tw-p-4 tw-text-center tw-font-semibold" data-i18n="pricing.compare.row20.enterprise">Unlimited</td>
+                            </tr>
+                            <tr class="tw-border-b tw-border-gray-100 tw-bg-gray-50">
+                                <td class="tw-p-4 tw-text-gray-700" data-i18n="pricing.compare.row21.name">Role-based access (driver-limited views)</td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-dash tw-text-gray-400 tw-text-xl"></i></td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-check-lg tw-text-brand-green tw-text-xl"></i></td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-check-lg tw-text-brand-green tw-text-xl"></i></td>
+                            </tr>
+                            <tr class="tw-border-b tw-border-gray-100">
+                                <td class="tw-p-4 tw-text-gray-700" data-i18n="pricing.compare.row22.name">API access</td>
+                                <td class="tw-p-4 tw-text-center" data-i18n="pricing.compare.row22.starter">REST API</td>
+                                <td class="tw-p-4 tw-text-center" data-i18n="pricing.compare.row22.growth">REST API + Webhooks</td>
+                                <td class="tw-p-4 tw-text-center tw-font-semibold" data-i18n="pricing.compare.row22.enterprise">REST API + Webhooks</td>
+                            </tr>
+                            <tr class="tw-border-b tw-border-gray-100 tw-bg-gray-50">
+                                <td class="tw-p-4 tw-text-gray-700" data-i18n="pricing.compare.row23.name">Multi-merchant &amp; SSO (SAML 2.0)</td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-dash tw-text-gray-400 tw-text-xl"></i></td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-dash tw-text-gray-400 tw-text-xl"></i></td>
+                                <td class="tw-p-4 tw-text-center"><i class="bi bi-check-lg tw-text-brand-green tw-text-xl"></i></td>
+                            </tr>
+                            <tr class="tw-border-b tw-border-gray-100">
+                                <td class="tw-p-4 tw-text-gray-700" data-i18n="pricing.compare.row24.name">Support level</td>
+                                <td class="tw-p-4 tw-text-center" data-i18n="pricing.compare.row24.starter">Email</td>
+                                <td class="tw-p-4 tw-text-center" data-i18n="pricing.compare.row24.growth">Priority</td>
+                                <td class="tw-p-4 tw-text-center tw-font-semibold" data-i18n="pricing.compare.row24.enterprise">24/7 Premium + Account Manager</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="tw-w-full tw-bg-gradient-to-br tw-from-blue-50 tw-to-green-50 tw-p-12 max-md:tw-p-8">
+            <div class="tw-mx-auto tw-max-w-[900px]">
+                <div class="tw-text-center tw-mb-12">
+                    <h2 class="tw-text-4xl tw-font-bold tw-mb-4" data-i18n-html="pricing.faq.title">
+                        Frequently asked <span class="tw-text-brand-green">questions</span>
+                    </h2>
+                    <p class="tw-text-gray-600 tw-text-lg" data-i18n="pricing.faq.subtitle">
+                        Everything you need to know about our pricing
+                    </p>
+                </div>
+
+                <div class="tw-space-y-4">
+                    <div class="tw-bg-white tw-rounded-lg tw-p-6 tw-shadow-md">
+                        <h3 class="tw-font-semibold tw-text-lg tw-text-gray-800 tw-mb-2">
+                            <i class="bi bi-question-circle tw-text-brand-blue tw-mr-2"></i>
+                            <span data-i18n="pricing.faq.q1">How does the 30-day free pilot work?</span>
+                        </h3>
+                        <p class="tw-text-gray-600 tw-ml-8" data-i18n="pricing.faq.a1">
+                            Start using Freytor immediately with full access to all features of your chosen plan. No credit card required. We’ll import your first 20 shipments free, give you a guided onboarding call, and show you the savings. After 30 days, choose to continue with a paid subscription or walk away with no obligations.
+                        </p>
+                    </div>
+
+                    <div class="tw-bg-white tw-rounded-lg tw-p-6 tw-shadow-md">
+                        <h3 class="tw-font-semibold tw-text-lg tw-text-gray-800 tw-mb-2">
+                            <i class="bi bi-question-circle tw-text-brand-blue tw-mr-2"></i>
+                            <span data-i18n="pricing.faq.q2">What happens if I exceed my shipment limit?</span>
+                        </h3>
+                        <p class="tw-text-gray-600 tw-ml-8" data-i18n="pricing.faq.a2">
+                            You'll be notified when approaching your limit. Additional shipments are charged at $0.10 per shipment on Starter, $0.08 on Growth. Enterprise has unlimited shipments included.
+                        </p>
+                    </div>
+
+                    <div class="tw-bg-white tw-rounded-lg tw-p-6 tw-shadow-md">
+                        <h3 class="tw-font-semibold tw-text-lg tw-text-gray-800 tw-mb-2">
+                            <i class="bi bi-question-circle tw-text-brand-blue tw-mr-2"></i>
+                            <span data-i18n="pricing.faq.q3">Can I switch plans later?</span>
+                        </h3>
+                        <p class="tw-text-gray-600 tw-ml-8" data-i18n="pricing.faq.a3">
+                            Absolutely! Upgrade or downgrade at any time. Upgrades take effect immediately. Downgrades apply at the next billing cycle, and you keep access to your current features until then.
+                        </p>
+                    </div>
+
+                    <div class="tw-bg-white tw-rounded-lg tw-p-6 tw-shadow-md">
+                        <h3 class="tw-font-semibold tw-text-lg tw-text-gray-800 tw-mb-2">
+                            <i class="bi bi-question-circle tw-text-brand-blue tw-mr-2"></i>
+                            <span data-i18n="pricing.faq.q4">Which carriers do you integrate with?</span>
+                        </h3>
+                        <p class="tw-text-gray-600 tw-ml-8" data-i18n="pricing.faq.a4">
+                            We support 100+ carriers including DHL, FedEx, UPS, local couriers, and regional carriers across emerging markets. Custom carrier integrations available on Enterprise plans.
+                        </p>
+                    </div>
+
+                    <div class="tw-bg-white tw-rounded-lg tw-p-6 tw-shadow-md">
+                        <h3 class="tw-font-semibold tw-text-lg tw-text-gray-800 tw-mb-2">
+                            <i class="bi bi-question-circle tw-text-brand-blue tw-mr-2"></i>
+                            <span data-i18n="pricing.faq.q5">Do you offer discounts for non-profits or educational institutions?</span>
+                        </h3>
+                        <p class="tw-text-gray-600 tw-ml-8" data-i18n="pricing.faq.a5">
+                            Yes! We offer special pricing for verified non-profit organizations and educational institutions. Contact our sales team to learn more about eligibility and discounts.
+                        </p>
+                    </div>
+
+                    <div class="tw-bg-white tw-rounded-lg tw-p-6 tw-shadow-md">
+                        <h3 class="tw-font-semibold tw-text-lg tw-text-gray-800 tw-mb-2">
+                            <i class="bi bi-question-circle tw-text-brand-blue tw-mr-2"></i>
+                            <span data-i18n="pricing.faq.q6">Is my data secure?</span>
+                        </h3>
+                        <p class="tw-text-gray-600 tw-ml-8" data-i18n="pricing.faq.a6">
+                            Yes. Your data is encrypted in transit (256-bit SSL) and at rest, with daily encrypted backups and strict access controls. We never share or sell your data. SOC 2 Type II certification is currently in progress. We follow GDPR principles — you can request deletion of your data at any time.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="tw-text-center tw-mt-12">
+                    <p class="tw-text-gray-600 tw-mb-4" data-i18n="pricing.faq.still">Still have questions?</p>
+                    <a href="contact.html" class="btn tw-inline-flex" data-i18n="pricing.faq.contact">
+                        Contact Sales
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trust & Value Section -->
+        <section class="tw-w-full tw-bg-white tw-p-12 max-md:tw-p-8">
+            <div class="tw-mx-auto tw-max-w-[1200px]">
+                <div class="tw-text-center tw-mb-12">
+                    <h2 class="tw-text-3xl tw-font-bold tw-mb-4" data-i18n-html="pricing.trust.title">
+                        Why businesses <span class="tw-text-brand-blue">choose</span> Freytor
+                    </h2>
+                </div>
+
+                <div class="tw-grid tw-grid-cols-1 md:tw-grid-cols-3 tw-gap-8">
+                    <div class="tw-text-center">
+                        <div class="tw-flex tw-justify-center tw-mb-4">
+                            <div class="tw-flex tw-h-16 tw-w-16 tw-place-items-center tw-place-content-center tw-rounded-full tw-bg-blue-100">
+                                <i class="bi bi-shield-check tw-text-3xl tw-text-brand-blue"></i>
+                            </div>
+                        </div>
+                        <h3 class="tw-text-xl tw-font-semibold tw-mb-2" data-i18n="pricing.trust.1.title">No hidden fees, no hardware</h3>
+                        <p class="tw-text-gray-600" data-i18n="pricing.trust.1.desc">
+                            Transparent pricing with no setup costs, no GPS trackers, no long-term contracts, and no surprise charges.
+                        </p>
+                    </div>
+
+                    <div class="tw-text-center">
+                        <div class="tw-flex tw-justify-center tw-mb-4">
+                            <div class="tw-flex tw-h-16 tw-w-16 tw-place-items-center tw-place-content-center tw-rounded-full tw-bg-green-100">
+                                <i class="bi bi-graph-up tw-text-3xl tw-text-brand-green"></i>
+                            </div>
+                        </div>
+                        <h3 class="tw-text-xl tw-font-semibold tw-mb-2" data-i18n="pricing.trust.2.title">Customers report 25–40% savings</h3>
+                        <p class="tw-text-gray-600" data-i18n="pricing.trust.2.desc">
+                            Route optimization (10–15% fuel), reduced re-deliveries, carrier rate comparisons, and 3–5 hrs/week saved. <a href="faq.html#savings" class="tw-text-brand-blue hover:tw-underline tw-text-sm">See methodology</a>
+                        </p>
+                    </div>
+
+                    <div class="tw-text-center">
+                        <div class="tw-flex tw-justify-center tw-mb-4">
+                            <div class="tw-flex tw-h-16 tw-w-16 tw-place-items-center tw-place-content-center tw-rounded-full tw-bg-blue-100">
+                                <i class="bi bi-people tw-text-3xl tw-text-brand-blue"></i>
+                            </div>
+                        </div>
+                        <h3 class="tw-text-xl tw-font-semibold tw-mb-2" data-i18n="pricing.trust.3.title">White-glove onboarding</h3>
+                        <p class="tw-text-gray-600" data-i18n="pricing.trust.3.desc">
+                            Every Starter plan includes a guided onboarding call. We import your first 20 shipments free and get you operational in under 10 minutes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="tw-w-full tw-bg-gradient-to-br tw-from-blue-50 tw-to-green-50 tw-p-12 max-md:tw-p-8">
+            <div class="tw-mx-auto tw-max-w-[700px] tw-text-center">
+                <h2 class="tw-text-4xl tw-font-bold tw-mb-4" data-i18n-html="pricing.final.title">
+                    Ready to <span class="tw-text-brand-green">optimize</span> your logistics?
+                </h2>
+                <p class="tw-text-lg tw-text-gray-600 tw-mb-8" data-i18n="pricing.final.subtitle">
+                    Join hundreds of SMEs streamlining their operations with Freytor. Start your free 30-day pilot today.
+                </p>
+                <div class="tw-flex tw-gap-4 tw-justify-center tw-flex-wrap">
+                    <a href="signup.html" class="btn tw-text-lg tw-px-8 tw-py-4" data-i18n="pricing.cta.pilot">
+                        Start 30-Day Free Pilot
+                    </a>
+                    <a href="contact.html" class="tw-rounded-lg tw-border-2 tw-border-brand-blue tw-px-8 tw-py-4 tw-font-semibold tw-text-brand-blue tw-transition-all tw-duration-300 hover:tw-bg-brand-blue hover:tw-text-white tw-inline-flex tw-place-items-center" data-i18n="pricing.final.demo">
+                        Schedule Demo
+                    </a>
+                </div>
+            </div>
+        </section>
+        </main>
+
+        <!-- Sticky CTA for Mobile -->
+        <div class="sticky-cta" id="sticky-cta">
+            <a href="signup.html" class="btn" data-i18n="pricing.cta.pilot">
+                Start 30-Day Free Pilot
+            </a>
+        </div>
+
+        <!-- Footer Component -->
+        <div id="footer-component"></div>
+        
+        <!-- WhatsApp Floating Button -->
+        <a href="https://wa.me/50766393293?text=Hi%2C%20I%20have%20questions%20about%20Freytor%20pricing" 
+           target="_blank"
+           rel="noopener noreferrer"
+           class="tw-fixed tw-bottom-6 tw-right-6 tw-z-50 tw-bg-green-500 hover:tw-bg-green-600 tw-text-white tw-rounded-full tw-p-4 tw-shadow-2xl hover:tw-scale-110 tw-transition-all tw-duration-300"
+           onclick="trackEvent('whatsapp_click', 'contact', 'pricing_page')"
+           aria-label="Contact us on WhatsApp"
+           title="Chat with us on WhatsApp">
+            <i class="bi bi-whatsapp tw-text-3xl"></i>
+        </a>
+
+        <script src="./translations.js"></script>
+        <script src="./i18n.js"></script>
+        <script src="./index.js"></script>
+        <script src="./components/components.js"></script>
+        <script src="./paddle-checkout.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                // Toggle between Annual and Monthly with price updates
+                const annualBtn = document.getElementById('annual-btn');
+                const monthlyBtn = document.getElementById('monthly-btn');
+                const priceValues = document.querySelectorAll('.price-value');
+                const billingTexts = document.querySelectorAll('.billing-text');
+
+                if (!annualBtn || !monthlyBtn) {
+                    console.error('Toggle buttons not found');
+                    return;
+                }
+
+                function updatePrices(plan) {
+                    priceValues.forEach(price => {
+                        price.style.transform = 'scale(0.8)';
+                        price.style.opacity = '0.5';
+                        setTimeout(() => {
+                            price.textContent = price.dataset[plan];
+                            price.style.transform = 'scale(1)';
+                            price.style.opacity = '1';
+                        }, 150);
+                    });
+                    billingTexts.forEach(text => {
+                        text.style.opacity = '0';
+                        setTimeout(() => {
+                            text.textContent = text.dataset[plan];
+                            text.style.opacity = '1';
+                        }, 150);
+                    });
+                }
+
+                annualBtn.addEventListener('click', () => {
+                    annualBtn.classList.add('tw-bg-brand-blue', 'tw-text-white');
+                    annualBtn.classList.remove('tw-text-gray-600', 'hover:tw-bg-gray-100');
+                    monthlyBtn.classList.remove('tw-bg-brand-blue', 'tw-text-white');
+                    monthlyBtn.classList.add('tw-text-gray-600', 'hover:tw-bg-gray-100');
+                    updatePrices('annual');
+                });
+
+                monthlyBtn.addEventListener('click', () => {
+                    monthlyBtn.classList.add('tw-bg-brand-blue', 'tw-text-white');
+                    monthlyBtn.classList.remove('tw-text-gray-600', 'hover:tw-bg-gray-100');
+                    annualBtn.classList.remove('tw-bg-brand-blue', 'tw-text-white');
+                    annualBtn.classList.add('tw-text-gray-600', 'hover:tw-bg-gray-100');
+                    updatePrices('monthly');
+                });
+
+                // Sticky CTA visibility on scroll
+                const stickyCta = document.getElementById('sticky-cta');
+                let lastScrollY = window.scrollY;
+                
+                function updateStickyCta() {
+                    const scrollY = window.scrollY;
+                    const windowHeight = window.innerHeight;
+                    const docHeight = document.documentElement.scrollHeight;
+                    
+                    // Show sticky CTA after scrolling 300px and hide near footer
+                    if (scrollY > 300 && scrollY < docHeight - windowHeight - 200) {
+                        stickyCta.classList.add('visible');
+                    } else {
+                        stickyCta.classList.remove('visible');
+                    }
+                    
+                    lastScrollY = scrollY;
+                }
+                
+                window.addEventListener('scroll', updateStickyCta, { passive: true });
+                
+                // ==================== SAVINGS CALCULATOR ====================
+                
+                /**
+                 * Calculate potential savings based on user input
+                 */
+                window.calculateSavings = function() {
+                    const deliveries = parseInt(document.getElementById('calc-deliveries')?.value || 0);
+                    const costPerDelivery = parseFloat(document.getElementById('calc-cost')?.value || 0);
+                    
+                    // Calculate savings (35% average: 20% route optimization + 15% fewer failures)
+                    const monthlySavings = Math.round(deliveries * costPerDelivery * 0.35);
+                    const annualSavings = monthlySavings * 12;
+                    
+                    // Update display
+                    const resultElement = document.getElementById('calc-result');
+                    const annualElement = document.getElementById('calc-annual');
+                    
+                    if (resultElement) {
+                        resultElement.textContent = monthlySavings.toLocaleString();
+                    }
+                    if (annualElement) {
+                        annualElement.textContent = annualSavings.toLocaleString();
+                    }
+                    
+                    // Track calculator usage
+                    if (typeof trackEvent === 'function') {
+                        trackEvent('calculator_used', 'pricing', `${deliveries}_deliveries_$${costPerDelivery}_cost`);
+                    }
+                }
+                
+                // Initialize calculator with default values
+                calculateSavings();
+                
+                // Animate pilot count (urgency element)
+                let pilotCount = 37;
+                setInterval(() => {
+                    // Randomly decrease count to create urgency (but not too fast)
+                    if (Math.random() > 0.7 && pilotCount > 25) {
+                        pilotCount--;
+                        const countElement = document.getElementById('pilot-count');
+                        if (countElement) {
+                            countElement.textContent = pilotCount;
+                        }
+                    }
+                }, 30000); // Update every 30 seconds
+            });
+        </script>
+        <script src="./exit-intent.js"></script>
+    </body>
+</html>

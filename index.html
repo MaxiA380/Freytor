@@ -1,0 +1,1108 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://plausible.io; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://cdnjs.cloudflare.com https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://plausible.io" />
+        <title>Freytor - Logistics SaaS for SMEs | Track. Route. Deliver.</title>
+        <meta name="description" content="Freytor - Logistics SaaS for SMEs. AI alerts, proof of delivery, CVRP routing, driver app, fleet management. No hardware required. From $19/mo. 30-day free pilot with guided onboarding." />
+        <link rel="shortcut icon" href="./assets/logo/logo.png" type="image/x-icon" />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:title" content="Freytor - Logistics SaaS for SMEs" />
+        <meta property="og:description" content="Replace spreadsheets and WhatsApp chaos with one simple logistics dashboard. Track, route, deliver - without the chaos." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://freytor.com" />
+        <meta property="og:image" content="./assets/images/home/dashboard.png" />
+
+        <!-- Plausible Analytics - Privacy-friendly tracking -->
+        <script defer data-domain="freytor.com" src="https://plausible.io/js/script.js"></script>
+
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="./tailwind.config.js"></script>
+        <link rel="stylesheet" href="./css/index.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+            integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <style>
+            @keyframes float {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-10px); }
+            }
+            @keyframes pulse-slow {
+                0%, 100% { opacity: 0.4; }
+                50% { opacity: 0.8; }
+            }
+            .animate-float { animation: float 4s ease-in-out infinite; }
+            .animate-float-delayed { animation: float 4s ease-in-out infinite 1s; }
+            .animate-pulse-slow { animation: pulse-slow 3s ease-in-out infinite; }
+        </style>
+    </head>
+    <body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-white">
+        <a href="#main-content" class="skip-to-content">Skip to main content</a>
+        
+        <!-- Header Component -->
+        <div id="header-component"></div>
+
+        <!-- ==================== HERO SECTION ==================== -->
+        <main id="main-content">
+        <section class="tw-relative tw-flex tw-min-h-[100vh] tw-w-full tw-flex-col tw-overflow-hidden tw-bg-gradient-to-br tw-from-white tw-via-blue-50/50 tw-to-green-50/50">
+            <!-- Background decorations -->
+            <div class="tw-absolute tw-top-20 tw-left-10 tw-w-72 tw-h-72 tw-bg-brand-blue/10 tw-rounded-full tw-blur-3xl animate-pulse-slow"></div>
+            <div class="tw-absolute tw-bottom-20 tw-right-10 tw-w-96 tw-h-96 tw-bg-brand-green/10 tw-rounded-full tw-blur-3xl animate-pulse-slow"></div>
+            
+            <div class="tw-flex tw-flex-1 tw-w-full tw-max-w-[1400px] tw-mx-auto tw-px-6 lg:tw-px-12 tw-pt-24 tw-pb-12 tw-gap-12 max-lg:tw-flex-col max-lg:tw-items-center">
+                <!-- Left content -->
+                <div class="tw-flex tw-flex-1 tw-flex-col tw-justify-center tw-max-w-[650px]">
+                    <!-- Badge -->
+                    <div class="tw-inline-flex tw-items-center tw-gap-2 tw-bg-brand-blue/10 tw-text-brand-blue tw-px-4 tw-py-2 tw-rounded-full tw-text-sm tw-font-medium tw-w-fit tw-mb-6">
+                        <i class="bi bi-lightning-charge-fill"></i>
+                        <span data-i18n="hero.badge">Built for SMEs in emerging markets</span>
+                    </div>
+                    
+                    <h1 class="tw-text-5xl lg:tw-text-6xl xl:tw-text-7xl tw-font-bold tw-leading-[1.1] tw-mb-6">
+                        <span class="tw-text-brand-blue" data-i18n="hero.title1">Track.</span>
+                        <span class="tw-text-brand-green" data-i18n="hero.title2">Route.</span>
+                        <span class="tw-text-brand-blue" data-i18n="hero.title3">Deliver.</span>
+                        <br />
+                        <span class="tw-text-gray-900" data-i18n="hero.title4">Without the chaos.</span>
+                    </h1>
+                    
+                    <p class="tw-text-xl tw-text-gray-600 tw-leading-relaxed tw-mb-4 tw-max-w-[540px]" data-i18n="hero.subtitle">
+                        Replace spreadsheets, WhatsApp groups, and fragmented carrier portals with one powerful dashboard. AI-powered alerts, proof of delivery, capacity-aware routing, and a driver app — all from $19/mo.
+                    </p>
+
+                    <!-- Sticker badges -->
+                    <div class="tw-flex tw-flex-wrap tw-gap-2 tw-mb-8">
+                        <span class="tw-inline-flex tw-items-center tw-gap-1.5 tw-bg-blue-100 tw-text-brand-blue tw-px-3 tw-py-1.5 tw-rounded-full tw-text-xs tw-font-bold tw-uppercase tw-tracking-wide tw-border tw-border-blue-200"><i class="bi bi-robot"></i> AI Alerts</span>
+                        <span class="tw-inline-flex tw-items-center tw-gap-1.5 tw-bg-green-100 tw-text-brand-green tw-px-3 tw-py-1.5 tw-rounded-full tw-text-xs tw-font-bold tw-uppercase tw-tracking-wide tw-border tw-border-green-200"><i class="bi bi-camera"></i> Proof of Delivery</span>
+                        <span class="tw-inline-flex tw-items-center tw-gap-1.5 tw-bg-purple-100 tw-text-purple-700 tw-px-3 tw-py-1.5 tw-rounded-full tw-text-xs tw-font-bold tw-uppercase tw-tracking-wide tw-border tw-border-purple-200"><i class="bi bi-geo-alt"></i> CVRP Routing</span>
+                        <span class="tw-inline-flex tw-items-center tw-gap-1.5 tw-bg-yellow-100 tw-text-yellow-700 tw-px-3 tw-py-1.5 tw-rounded-full tw-text-xs tw-font-bold tw-uppercase tw-tracking-wide tw-border tw-border-yellow-200"><i class="bi bi-phone"></i> Driver App</span>
+                        <span class="tw-inline-flex tw-items-center tw-gap-1.5 tw-bg-emerald-100 tw-text-emerald-700 tw-px-3 tw-py-1.5 tw-rounded-full tw-text-xs tw-font-bold tw-uppercase tw-tracking-wide tw-border tw-border-emerald-200"><i class="bi bi-leaf"></i> Eco Routing</span>
+                    </div>
+                    
+                    <!-- CTA buttons -->
+                    <div class="tw-flex tw-flex-wrap tw-gap-4 tw-mb-8">
+                        <a href="signup.html" class="btn tw-text-lg tw-px-8 tw-py-4">
+                            <span data-i18n="hero.cta.trial">Start 30-Day Free Pilot</span>
+                            <i class="bi bi-arrow-right tw-ml-2"></i>
+                        </a>
+                        <a href="contact.html" class="tw-flex tw-items-center tw-gap-2 tw-px-8 tw-py-4 tw-border-2 tw-border-gray-300 tw-rounded-lg tw-font-medium tw-text-gray-700 tw-transition-all hover:tw-border-brand-blue hover:tw-text-brand-blue">
+                            <i class="bi bi-play-circle tw-text-xl"></i>
+                            <span data-i18n="hero.cta.demo">Book a Demo</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Trust indicators -->
+                    <div class="tw-flex tw-flex-wrap tw-items-center tw-gap-6 tw-text-sm tw-text-gray-500">
+                        <div class="tw-flex tw-items-center tw-gap-2">
+                            <i class="bi bi-check-circle-fill tw-text-brand-green"></i>
+                            <span data-i18n="hero.trust.trial">30-day free pilot</span>
+                        </div>
+                        <div class="tw-flex tw-items-center tw-gap-2">
+                            <i class="bi bi-check-circle-fill tw-text-brand-green"></i>
+                            <span data-i18n="hero.trust.nocard">No credit card required</span>
+                        </div>
+                        <div class="tw-flex tw-items-center tw-gap-2">
+                            <i class="bi bi-check-circle-fill tw-text-brand-green"></i>
+                            <span data-i18n="hero.trust.cancel">We import your first 20 shipments free</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right content - Dashboard preview -->
+                <div class="tw-flex tw-flex-1 tw-items-center tw-justify-center tw-relative">
+                    <div class="tw-relative animate-float">
+                        <!-- Main dashboard image -->
+                        <div class="tw-rounded-2xl tw-shadow-2xl tw-overflow-hidden tw-border tw-border-gray-200">
+                            <img
+                                src="./assets/images/home/dashboard.png"
+                                data-i18n-title="hero.image.alt"
+                                alt="Freytor Dashboard Preview"
+                                class="tw-w-full tw-max-w-[600px] tw-h-auto"
+                                loading="eager"
+                                fetchpriority="high"
+                            />
+                        </div>
+                        
+                        <!-- Floating cards -->
+                        <div class="tw-absolute tw--top-6 tw--left-6 tw-bg-white tw-rounded-xl tw-shadow-lg tw-p-4 tw-flex tw-items-center tw-gap-3 animate-float-delayed max-md:tw-hidden">
+                            <div class="tw-w-10 tw-h-10 tw-bg-green-100 tw-rounded-full tw-flex tw-items-center tw-justify-center">
+                                <i class="bi bi-check-lg tw-text-brand-green tw-text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="tw-text-sm tw-font-semibold tw-text-gray-800" data-i18n="hero.card.delivery">Delivery Complete</p>
+                                <p class="tw-text-xs tw-text-gray-500" data-i18n="hero.card.order">Order #4521 delivered</p>
+                            </div>
+                        </div>
+                        
+                        <div class="tw-absolute tw--bottom-4 tw--right-4 tw-bg-white tw-rounded-xl tw-shadow-lg tw-p-4 animate-float max-md:tw-hidden">
+                            <div class="tw-flex tw-items-center tw-gap-2 tw-mb-2">
+                                <i class="bi bi-graph-up-arrow tw-text-brand-blue"></i>
+                                <span class="tw-text-sm tw-font-semibold tw-text-gray-800" data-i18n="hero.card.savings">Route Savings</span>
+                            </div>
+                            <p class="tw-text-2xl tw-font-bold tw-text-brand-green">+15%</p>
+                            <p class="tw-text-xs tw-text-gray-500" data-i18n="hero.card.fuel">fuel efficiency</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== STATS SECTION ==================== -->
+        <section class="tw-bg-gradient-to-r tw-from-brand-blue tw-to-brand-green tw-py-16">
+            <div class="tw-max-w-[1200px] tw-mx-auto tw-px-6">
+                <div class="tw-grid tw-grid-cols-2 lg:tw-grid-cols-4 tw-gap-8">
+                    <div class="tw-text-center tw-text-white">
+                        <div class="tw-text-4xl lg:tw-text-5xl tw-font-bold tw-mb-2">30+</div>
+                        <div class="tw-text-white/80" data-i18n="stats.companies">Active Companies</div>
+                    </div>
+                    <div class="tw-text-center tw-text-white">
+                        <div class="tw-text-4xl lg:tw-text-5xl tw-font-bold tw-mb-2">100K+</div>
+                        <div class="tw-text-white/80" data-i18n="stats.shipments">Shipments Tracked</div>
+                    </div>
+                    <div class="tw-text-center tw-text-white">
+                        <div class="tw-text-4xl lg:tw-text-5xl tw-font-bold tw-mb-2">25–40%</div>
+                        <div class="tw-text-white/80" data-i18n="stats.savings">Reported Cost Savings*</div>
+                    </div>
+                    <div class="tw-text-center tw-text-white">
+                        <div class="tw-text-4xl lg:tw-text-5xl tw-font-bold tw-mb-2">99.9%</div>
+                        <div class="tw-text-white/80" data-i18n="stats.uptime">Uptime SLA</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SUPPORTED CARRIERS SECTION ==================== -->
+        <section class="tw-py-16 tw-bg-gray-50">
+            <div class="tw-max-w-[1200px] tw-mx-auto tw-px-6">
+                <p class="tw-text-center tw-text-gray-500 tw-font-medium tw-mb-8" data-i18n="carriers.title">INTEGRATED WITH 100+ CARRIERS WORLDWIDE</p>
+                <div class="tw-flex tw-flex-wrap tw-justify-center tw-items-center tw-gap-8 lg:tw-gap-12">
+                    <!-- DHL -->
+                    <div class="tw-bg-white tw-rounded-xl tw-px-8 tw-py-6 tw-shadow-sm tw-border tw-border-gray-100 hover:tw-shadow-md tw-transition-all">
+                        <img src="assets/images/brand-logos/dhl.svg" alt="DHL" class="tw-h-8 tw-object-contain">
+                    </div>
+                    <!-- DHL eCommerce -->
+                    <div class="tw-bg-white tw-rounded-xl tw-px-8 tw-py-6 tw-shadow-sm tw-border tw-border-gray-100 hover:tw-shadow-md tw-transition-all">
+                        <img src="assets/images/brand-logos/DHL ecom.svg" alt="DHL eCommerce" class="tw-h-8 tw-object-contain">
+                    </div>
+                    <!-- FedEx -->
+                    <div class="tw-bg-white tw-rounded-xl tw-px-8 tw-py-6 tw-shadow-sm tw-border tw-border-gray-100 hover:tw-shadow-md tw-transition-all">
+                        <img src="assets/images/brand-logos/fedex.svg" alt="FedEx" class="tw-h-8 tw-object-contain">
+                    </div>
+                    <!-- UPS -->
+                    <div class="tw-bg-white tw-rounded-xl tw-px-8 tw-py-6 tw-shadow-sm tw-border tw-border-gray-100 hover:tw-shadow-md tw-transition-all">
+                        <img src="assets/images/brand-logos/ups.svg" alt="UPS" class="tw-h-8 tw-object-contain">
+                    </div>
+                    <!-- USPS -->
+                    <div class="tw-bg-white tw-rounded-xl tw-px-8 tw-py-6 tw-shadow-sm tw-border tw-border-gray-100 hover:tw-shadow-md tw-transition-all">
+                        <img src="assets/images/brand-logos/usps.png" alt="USPS" class="tw-h-8 tw-object-contain">
+                    </div>
+                    <!-- DPD -->
+                    <div class="tw-bg-white tw-rounded-xl tw-px-8 tw-py-6 tw-shadow-sm tw-border tw-border-gray-100 hover:tw-shadow-md tw-transition-all">
+                        <img src="assets/images/brand-logos/dpd.svg" alt="DPD" class="tw-h-8 tw-object-contain">
+                    </div>
+                    <!-- More -->
+                    <div class="tw-bg-gradient-to-r tw-from-brand-blue tw-to-brand-green tw-rounded-xl tw-px-6 tw-py-4 tw-shadow-sm hover:tw-shadow-md tw-transition-all">
+                        <span class="tw-text-xl tw-font-bold tw-text-white" data-i18n="carriers.more">+95 more</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PROBLEM/SOLUTION SECTION ==================== -->
+        <section class="tw-py-20 tw-px-6">
+            <div class="tw-max-w-[1200px] tw-mx-auto">
+                <div class="tw-text-center tw-mb-16">
+                    <h2 class="tw-text-4xl lg:tw-text-5xl tw-font-bold tw-mb-4" data-i18n="problem.title">
+                        Logistics shouldn't be this hard
+                    </h2>
+                    <p class="tw-text-xl tw-text-gray-600 tw-max-w-[700px] tw-mx-auto" data-i18n="problem.subtitle">
+                        Sound familiar? You're not alone. Most SMEs struggle with fragmented logistics tools.
+                    </p>
+                </div>
+                
+                <div class="tw-grid md:tw-grid-cols-2 tw-gap-8 tw-mb-16">
+                    <!-- Problems -->
+                    <div class="tw-bg-red-50 tw-rounded-2xl tw-p-8 tw-border tw-border-red-100">
+                        <div class="tw-flex tw-items-center tw-gap-3 tw-mb-6">
+                            <div class="tw-w-12 tw-h-12 tw-bg-red-100 tw-rounded-full tw-flex tw-items-center tw-justify-center">
+                                <i class="bi bi-x-lg tw-text-red-500 tw-text-xl"></i>
+                            </div>
+                            <h3 class="tw-text-2xl tw-font-bold tw-text-gray-800" data-i18n="problem.old.title">The Old Way</h3>
+                        </div>
+                        <ul class="tw-space-y-4">
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-x-circle tw-text-red-400 tw-text-lg tw-mt-1"></i>
+                                <span class="tw-text-gray-700" data-i18n="problem.old.1">Juggling 5+ carrier portals daily</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-x-circle tw-text-red-400 tw-text-lg tw-mt-1"></i>
+                                <span class="tw-text-gray-700" data-i18n="problem.old.2">Spreadsheets that break every week</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-x-circle tw-text-red-400 tw-text-lg tw-mt-1"></i>
+                                <span class="tw-text-gray-700" data-i18n="problem.old.3">WhatsApp chaos for driver updates &amp; POD</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-x-circle tw-text-red-400 tw-text-lg tw-mt-1"></i>
+                                <span class="tw-text-gray-700" data-i18n="problem.old.4">No visibility — surprises from delays, stockouts &amp; disputes</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-x-circle tw-text-red-400 tw-text-lg tw-mt-1"></i>
+                                <span class="tw-text-gray-700" data-i18n="problem.old.5">Enterprise tools with $500+/mo price tags &amp; GPS hardware</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Solutions -->
+                    <div class="tw-bg-green-50 tw-rounded-2xl tw-p-8 tw-border tw-border-green-100">
+                        <div class="tw-flex tw-items-center tw-gap-3 tw-mb-6">
+                            <div class="tw-w-12 tw-h-12 tw-bg-green-100 tw-rounded-full tw-flex tw-items-center tw-justify-center">
+                                <i class="bi bi-check-lg tw-text-brand-green tw-text-xl"></i>
+                            </div>
+                            <h3 class="tw-text-2xl tw-font-bold tw-text-gray-800" data-i18n="problem.new.title">The Freytor Way</h3>
+                        </div>
+                        <ul class="tw-space-y-4">
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-1"></i>
+                                <span class="tw-text-gray-700" data-i18n="problem.new.1">One dashboard, 100+ carriers, zero GPS hardware needed</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-1"></i>
+                                <span class="tw-text-gray-700" data-i18n="problem.new.2">AI delay predictions + auto customer updates (WhatsApp/SMS/email)</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-1"></i>
+                                <span class="tw-text-gray-700" data-i18n="problem.new.3">Proof of delivery with photos, signatures &amp; notes</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-1"></i>
+                                <span class="tw-text-gray-700" data-i18n="problem.new.4">Capacity-aware routing (CVRP) + driver app for last-mile</span>
+                            </li>
+                            <li class="tw-flex tw-items-start tw-gap-3">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green tw-text-lg tw-mt-1"></i>
+                                <span class="tw-text-gray-700" data-i18n="problem.new.5">From $19/mo — setup in under 10 minutes, 30-day free pilot</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== FEATURES SECTION ==================== -->
+        <section class="tw-py-20 tw-px-6 tw-bg-gradient-to-b tw-from-white tw-to-blue-50/30">
+            <div class="tw-max-w-[1200px] tw-mx-auto">
+                <div class="tw-text-center tw-mb-16">
+                    <h2 class="tw-text-4xl lg:tw-text-5xl tw-font-bold tw-mb-4">
+                        <span data-i18n="features.title">Everything you need to deliver smarter</span>
+                    </h2>
+                    <p class="tw-text-xl tw-text-gray-600 tw-max-w-[600px] tw-mx-auto" data-i18n="features.subtitle">
+                        Powerful features designed specifically for growing logistics operations.
+                    </p>
+                </div>
+                
+                <div class="tw-grid md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-8">
+                    <!-- Feature 1 - Shipment Tracking -->
+                    <div class="card-blue">
+                        <div class="tw-flex tw-items-center tw-justify-between tw-mb-6">
+                            <div class="tw-w-14 tw-h-14 tw-bg-blue-100 tw-rounded-xl tw-flex tw-items-center tw-justify-center">
+                                <i class="bi bi-box-seam tw-text-2xl tw-text-brand-blue"></i>
+                            </div>
+                            <span class="tw-text-[10px] tw-font-bold tw-uppercase tw-tracking-wider tw-bg-blue-100 tw-text-brand-blue tw-px-2.5 tw-py-1 tw-rounded-full" data-i18n="features.card1.badge">All Plans</span>
+                        </div>
+                        <h3 class="tw-text-xl tw-font-bold tw-text-gray-800 tw-mb-3" data-i18n="features.card1.title">Unified Shipment Tracking</h3>
+                        <p class="tw-text-gray-600 tw-leading-relaxed" data-i18n="features.card1.desc">
+                            Track shipments across 100+ carriers from one dashboard. Real-time updates, delivery confirmations, and exception alerts.
+                        </p>
+                    </div>
+                    
+                    <!-- Feature 2 - Route Optimization -->
+                    <div class="card-green">
+                        <div class="tw-flex tw-items-center tw-justify-between tw-mb-6">
+                            <div class="tw-w-14 tw-h-14 tw-bg-green-100 tw-rounded-xl tw-flex tw-items-center tw-justify-center">
+                                <i class="bi bi-geo-alt tw-text-2xl tw-text-brand-green"></i>
+                            </div>
+                            <span class="tw-text-[10px] tw-font-bold tw-uppercase tw-tracking-wider tw-bg-blue-100 tw-text-brand-blue tw-px-2.5 tw-py-1 tw-rounded-full" data-i18n="features.card2.badge">All Plans</span>
+                        </div>
+                        <h3 class="tw-text-xl tw-font-bold tw-text-gray-800 tw-mb-3" data-i18n="features.card2.title">Smart Route Optimization</h3>
+                        <p class="tw-text-gray-600 tw-leading-relaxed" data-i18n="features.card2.desc">
+                            Basic routing on Starter. CVRP with capacity & multi-stop on Growth. Full OR-Tools solver + EV routing on Enterprise.
+                        </p>
+                    </div>
+                    
+                    <!-- Feature 3 - POD -->
+                    <div class="card-blue">
+                        <div class="tw-flex tw-items-center tw-justify-between tw-mb-6">
+                            <div class="tw-w-14 tw-h-14 tw-bg-blue-100 tw-rounded-xl tw-flex tw-items-center tw-justify-center">
+                                <i class="bi bi-camera tw-text-2xl tw-text-brand-blue"></i>
+                            </div>
+                            <span class="tw-text-[10px] tw-font-bold tw-uppercase tw-tracking-wider tw-bg-green-100 tw-text-brand-green tw-px-2.5 tw-py-1 tw-rounded-full" data-i18n="features.card3.badge">Growth+</span>
+                        </div>
+                        <h3 class="tw-text-xl tw-font-bold tw-text-gray-800 tw-mb-3" data-i18n="features.card3.title">Proof of Delivery</h3>
+                        <p class="tw-text-gray-600 tw-leading-relaxed" data-i18n="features.card3.desc">
+                            Drivers upload photos, signatures & notes on delivery. Auto-closes shipments and notifies customers instantly.
+                        </p>
+                    </div>
+                    
+                    <!-- Feature 4 - Multi-Driver & Driver App -->
+                    <div class="card-green">
+                        <div class="tw-flex tw-items-center tw-justify-between tw-mb-6">
+                            <div class="tw-w-14 tw-h-14 tw-bg-green-100 tw-rounded-xl tw-flex tw-items-center tw-justify-center">
+                                <i class="bi bi-phone tw-text-2xl tw-text-brand-green"></i>
+                            </div>
+                            <span class="tw-text-[10px] tw-font-bold tw-uppercase tw-tracking-wider tw-bg-green-100 tw-text-brand-green tw-px-2.5 tw-py-1 tw-rounded-full" data-i18n="features.card4.badge">Growth+</span>
+                        </div>
+                        <h3 class="tw-text-xl tw-font-bold tw-text-gray-800 tw-mb-3" data-i18n="features.card4.title">Driver App & Multi-Dispatch</h3>
+                        <p class="tw-text-gray-600 tw-leading-relaxed" data-i18n="features.card4.desc">
+                            Mobile/PWA for drivers with step-by-step navigation, check-in/out, and live updates. Dispatch routes to multiple drivers with service zones.
+                        </p>
+                    </div>
+                    
+                    <!-- Feature 5 - Inventory -->
+                    <div class="card-blue">
+                        <div class="tw-flex tw-items-center tw-justify-between tw-mb-6">
+                            <div class="tw-w-14 tw-h-14 tw-bg-blue-100 tw-rounded-xl tw-flex tw-items-center tw-justify-center">
+                                <i class="bi bi-bell tw-text-2xl tw-text-brand-blue"></i>
+                            </div>
+                            <span class="tw-text-[10px] tw-font-bold tw-uppercase tw-tracking-wider tw-bg-green-100 tw-text-brand-green tw-px-2.5 tw-py-1 tw-rounded-full" data-i18n="features.card5.badge">Growth+</span>
+                        </div>
+                        <h3 class="tw-text-xl tw-font-bold tw-text-gray-800 tw-mb-3" data-i18n="features.card5.title">Inventory & SKU Tracking</h3>
+                        <p class="tw-text-gray-600 tw-leading-relaxed" data-i18n="features.card5.desc">
+                            Track stock movements, set reorder points, and get low-stock alerts tied to shipment lead times.
+                        </p>
+                    </div>
+                    
+                    <!-- Feature 6 - AI Alerts -->
+                    <div class="card-green">
+                        <div class="tw-flex tw-items-center tw-justify-between tw-mb-6">
+                            <div class="tw-w-14 tw-h-14 tw-bg-green-100 tw-rounded-xl tw-flex tw-items-center tw-justify-center">
+                                <i class="bi bi-robot tw-text-2xl tw-text-brand-green"></i>
+                            </div>
+                            <span class="tw-text-[10px] tw-font-bold tw-uppercase tw-tracking-wider tw-bg-green-100 tw-text-brand-green tw-px-2.5 tw-py-1 tw-rounded-full" data-i18n="features.card6.badge">Growth+</span>
+                        </div>
+                        <h3 class="tw-text-xl tw-font-bold tw-text-gray-800 tw-mb-3" data-i18n="features.card6.title">AI Alerts & Notifications</h3>
+                        <p class="tw-text-gray-600 tw-leading-relaxed" data-i18n="features.card6.desc">
+                            Rules-based alerts for delays & exceptions. Automated WhatsApp, email & SMS updates to customers and stakeholders.
+                        </p>
+                    </div>
+                    
+                    <!-- Feature 7 - Analytics -->
+                    <div class="card-blue">
+                        <div class="tw-flex tw-items-center tw-justify-between tw-mb-6">
+                            <div class="tw-w-14 tw-h-14 tw-bg-blue-100 tw-rounded-xl tw-flex tw-items-center tw-justify-center">
+                                <i class="bi bi-graph-up tw-text-2xl tw-text-brand-blue"></i>
+                            </div>
+                            <span class="tw-text-[10px] tw-font-bold tw-uppercase tw-tracking-wider tw-bg-blue-100 tw-text-brand-blue tw-px-2.5 tw-py-1 tw-rounded-full" data-i18n="features.card7.badge">All Plans</span>
+                        </div>
+                        <h3 class="tw-text-xl tw-font-bold tw-text-gray-800 tw-mb-3" data-i18n="features.card7.title">Performance Analytics</h3>
+                        <p class="tw-text-gray-600 tw-leading-relaxed" data-i18n="features.card7.desc">
+                            Basic KPIs on Starter. Custom dashboards & widgets on Growth. Exportable reports & workflow automation on Enterprise.
+                        </p>
+                    </div>
+                    
+                    <!-- Feature 8 - Fleet Management -->
+                    <div class="card-green">
+                        <div class="tw-flex tw-items-center tw-justify-between tw-mb-6">
+                            <div class="tw-w-14 tw-h-14 tw-bg-green-100 tw-rounded-xl tw-flex tw-items-center tw-justify-center">
+                                <i class="bi bi-truck tw-text-2xl tw-text-brand-green"></i>
+                            </div>
+                            <span class="tw-text-[10px] tw-font-bold tw-uppercase tw-tracking-wider tw-bg-gray-800 tw-text-white tw-px-2.5 tw-py-1 tw-rounded-full" data-i18n="features.card8.badge">Enterprise</span>
+                        </div>
+                        <h3 class="tw-text-xl tw-font-bold tw-text-gray-800 tw-mb-3" data-i18n="features.card8.title">Fleet Management</h3>
+                        <p class="tw-text-gray-600 tw-leading-relaxed" data-i18n="features.card8.desc">
+                            Vehicle registry with capacities, types (truck/bike/EV), maintenance alerts. Assign vehicles to routes and drivers.
+                        </p>
+                    </div>
+                    
+                    <!-- Feature 9 - Integrations -->
+                    <div class="card-blue">
+                        <div class="tw-flex tw-items-center tw-justify-between tw-mb-6">
+                            <div class="tw-w-14 tw-h-14 tw-bg-blue-100 tw-rounded-xl tw-flex tw-items-center tw-justify-center">
+                                <i class="bi bi-plug tw-text-2xl tw-text-brand-blue"></i>
+                            </div>
+                            <span class="tw-text-[10px] tw-font-bold tw-uppercase tw-tracking-wider tw-bg-blue-100 tw-text-brand-blue tw-px-2.5 tw-py-1 tw-rounded-full" data-i18n="features.card9.badge">All Plans</span>
+                        </div>
+                        <h3 class="tw-text-xl tw-font-bold tw-text-gray-800 tw-mb-3" data-i18n="features.card9.title">Easy Integrations</h3>
+                        <p class="tw-text-gray-600 tw-leading-relaxed" data-i18n="features.card9.desc">
+                            REST API on all plans. Webhooks & rate comparisons on Growth. Custom carrier connectors & SSO on Enterprise.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PRODUCT SHOWCASE SECTION ==================== -->
+        <section class="tw-py-20 tw-px-6 tw-bg-white">
+
+            <!-- Platform Capabilities Sticker Grid -->
+            <div class="tw-max-w-[1200px] tw-mx-auto tw-mb-20">
+                <div class="tw-text-center tw-mb-12">
+                    <h2 class="tw-text-4xl lg:tw-text-5xl tw-font-bold tw-mb-4" data-i18n="platform.title">
+                        One platform, every capability
+                    </h2>
+                    <p class="tw-text-xl tw-text-gray-600 tw-max-w-[700px] tw-mx-auto" data-i18n="platform.subtitle">
+                        Modular features that grow with your business. No hardware, no complexity, no enterprise lock-in.
+                    </p>
+                </div>
+
+                <div class="tw-grid tw-grid-cols-2 md:tw-grid-cols-3 lg:tw-grid-cols-5 tw-gap-4">
+                    <div class="tw-bg-blue-50 tw-rounded-2xl tw-p-5 tw-text-center tw-border-2 tw-border-blue-100 tw-transition-all hover:tw-border-brand-blue hover:tw-shadow-lg hover:tw--translate-y-1">
+                        <div class="tw-text-3xl tw-mb-3"><i class="bi bi-robot tw-text-brand-blue"></i></div>
+                        <p class="tw-font-bold tw-text-sm tw-text-gray-800" data-i18n="platform.ai.title">AI Delay Alerts</p>
+                        <p class="tw-text-xs tw-text-gray-500 tw-mt-1" data-i18n="platform.ai.desc">Predict &amp; notify</p>
+                    </div>
+                    <div class="tw-bg-green-50 tw-rounded-2xl tw-p-5 tw-text-center tw-border-2 tw-border-green-100 tw-transition-all hover:tw-border-brand-green hover:tw-shadow-lg hover:tw--translate-y-1">
+                        <div class="tw-text-3xl tw-mb-3"><i class="bi bi-camera tw-text-brand-green"></i></div>
+                        <p class="tw-font-bold tw-text-sm tw-text-gray-800" data-i18n="platform.pod.title">Proof of Delivery</p>
+                        <p class="tw-text-xs tw-text-gray-500 tw-mt-1" data-i18n="platform.pod.desc">Photos &amp; signatures</p>
+                    </div>
+                    <div class="tw-bg-purple-50 tw-rounded-2xl tw-p-5 tw-text-center tw-border-2 tw-border-purple-100 tw-transition-all hover:tw-border-purple-500 hover:tw-shadow-lg hover:tw--translate-y-1">
+                        <div class="tw-text-3xl tw-mb-3"><i class="bi bi-geo-alt tw-text-purple-600"></i></div>
+                        <p class="tw-font-bold tw-text-sm tw-text-gray-800" data-i18n="platform.cvrp.title">CVRP Routing</p>
+                        <p class="tw-text-xs tw-text-gray-500 tw-mt-1" data-i18n="platform.cvrp.desc">Capacity-aware</p>
+                    </div>
+                    <div class="tw-bg-yellow-50 tw-rounded-2xl tw-p-5 tw-text-center tw-border-2 tw-border-yellow-100 tw-transition-all hover:tw-border-yellow-500 hover:tw-shadow-lg hover:tw--translate-y-1">
+                        <div class="tw-text-3xl tw-mb-3"><i class="bi bi-phone tw-text-yellow-600"></i></div>
+                        <p class="tw-font-bold tw-text-sm tw-text-gray-800" data-i18n="platform.driver.title">Driver App</p>
+                        <p class="tw-text-xs tw-text-gray-500 tw-mt-1" data-i18n="platform.driver.desc">PWA, no install</p>
+                    </div>
+                    <div class="tw-bg-emerald-50 tw-rounded-2xl tw-p-5 tw-text-center tw-border-2 tw-border-emerald-100 tw-transition-all hover:tw-border-emerald-500 hover:tw-shadow-lg hover:tw--translate-y-1">
+                        <div class="tw-text-3xl tw-mb-3"><i class="bi bi-leaf tw-text-emerald-600"></i></div>
+                        <p class="tw-font-bold tw-text-sm tw-text-gray-800" data-i18n="platform.eco.title">Eco Routing</p>
+                        <p class="tw-text-xs tw-text-gray-500 tw-mt-1" data-i18n="platform.eco.desc">EV &amp; emissions</p>
+                    </div>
+                    <div class="tw-bg-blue-50 tw-rounded-2xl tw-p-5 tw-text-center tw-border-2 tw-border-blue-100 tw-transition-all hover:tw-border-brand-blue hover:tw-shadow-lg hover:tw--translate-y-1">
+                        <div class="tw-text-3xl tw-mb-3"><i class="bi bi-boxes tw-text-brand-blue"></i></div>
+                        <p class="tw-font-bold tw-text-sm tw-text-gray-800" data-i18n="platform.sku.title">SKU Tracking</p>
+                        <p class="tw-text-xs tw-text-gray-500 tw-mt-1" data-i18n="platform.sku.desc">Warehouse &amp; stock</p>
+                    </div>
+                    <div class="tw-bg-green-50 tw-rounded-2xl tw-p-5 tw-text-center tw-border-2 tw-border-green-100 tw-transition-all hover:tw-border-brand-green hover:tw-shadow-lg hover:tw--translate-y-1">
+                        <div class="tw-text-3xl tw-mb-3"><i class="bi bi-truck tw-text-brand-green"></i></div>
+                        <p class="tw-font-bold tw-text-sm tw-text-gray-800" data-i18n="platform.fleet.title">Fleet Manager</p>
+                        <p class="tw-text-xs tw-text-gray-500 tw-mt-1" data-i18n="platform.fleet.desc">Vehicles &amp; maintenance</p>
+                    </div>
+                    <div class="tw-bg-purple-50 tw-rounded-2xl tw-p-5 tw-text-center tw-border-2 tw-border-purple-100 tw-transition-all hover:tw-border-purple-500 hover:tw-shadow-lg hover:tw--translate-y-1">
+                        <div class="tw-text-3xl tw-mb-3"><i class="bi bi-people tw-text-purple-600"></i></div>
+                        <p class="tw-font-bold tw-text-sm tw-text-gray-800" data-i18n="platform.vendor.title">Vendor Directory</p>
+                        <p class="tw-text-xs tw-text-gray-500 tw-mt-1" data-i18n="platform.vendor.desc">Ratings &amp; contacts</p>
+                    </div>
+                    <div class="tw-bg-yellow-50 tw-rounded-2xl tw-p-5 tw-text-center tw-border-2 tw-border-yellow-100 tw-transition-all hover:tw-border-yellow-500 hover:tw-shadow-lg hover:tw--translate-y-1">
+                        <div class="tw-text-3xl tw-mb-3"><i class="bi bi-chat-dots tw-text-yellow-600"></i></div>
+                        <p class="tw-font-bold tw-text-sm tw-text-gray-800" data-i18n="platform.chat.title">Team Chat</p>
+                        <p class="tw-text-xs tw-text-gray-500 tw-mt-1" data-i18n="platform.chat.desc">In-app coordination</p>
+                    </div>
+                    <div class="tw-bg-emerald-50 tw-rounded-2xl tw-p-5 tw-text-center tw-border-2 tw-border-emerald-100 tw-transition-all hover:tw-border-emerald-500 hover:tw-shadow-lg hover:tw--translate-y-1">
+                        <div class="tw-text-3xl tw-mb-3"><i class="bi bi-graph-up tw-text-emerald-600"></i></div>
+                        <p class="tw-font-bold tw-text-sm tw-text-gray-800" data-i18n="platform.dashboard.title">Custom Dashboards</p>
+                        <p class="tw-text-xs tw-text-gray-500 tw-mt-1" data-i18n="platform.dashboard.desc">Widgets &amp; workflows</p>
+                    </div>
+                </div>
+
+                <p class="tw-text-center tw-text-sm tw-text-gray-500 tw-mt-6">
+                    <span data-i18n="platform.footer">All features are modular \u2014 start with what you need, add more as you grow.</span> <a href="pricing.html" class="tw-text-brand-blue tw-font-semibold hover:tw-underline"><span data-i18n="platform.link">See which features are included in each plan</span> <i class="bi bi-arrow-right"></i></a>
+                </p>
+            </div>
+            <div class="tw-max-w-[1400px] tw-mx-auto">
+                <div class="tw-text-center tw-mb-16">
+                    <h2 class="tw-text-4xl lg:tw-text-5xl tw-font-bold tw-mb-4">
+                        See Freytor <span class="tw-text-brand-green">in action</span>
+                    </h2>
+                    <p class="tw-text-xl tw-text-gray-600 tw-max-w-[700px] tw-mx-auto">
+                        Powerful features designed for real logistics operations. Here's what you'll get.
+                    </p>
+                </div>
+                
+                <!-- Shipments List Showcase -->
+                <div class="tw-grid lg:tw-grid-cols-2 tw-gap-12 tw-items-center tw-mb-20">
+                    <div class="tw-order-2 lg:tw-order-1">
+                        <div class="tw-inline-flex tw-items-center tw-gap-2 tw-bg-brand-blue/10 tw-text-brand-blue tw-px-4 tw-py-2 tw-rounded-full tw-text-sm tw-font-medium tw-mb-4">
+                            <i class="bi bi-truck"></i>
+                            <span>Shipment Management</span>
+                        </div>
+                        <h3 class="tw-text-3xl lg:tw-text-4xl tw-font-bold tw-text-gray-800 tw-mb-4">
+                            All your shipments in <span class="tw-text-brand-blue">one place</span>
+                        </h3>
+                        <p class="tw-text-lg tw-text-gray-600 tw-leading-relaxed tw-mb-6">
+                            View, filter, and manage shipments from all carriers in a unified table. Track status, ETA, and location at a glance. Bulk upload via CSV or add shipments one by one.
+                        </p>
+                        <ul class="tw-space-y-3">
+                            <li class="tw-flex tw-items-center tw-gap-3 tw-text-gray-700">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green"></i>
+                                <span>Multi-carrier support (DHL, FedEx, UPS, USPS & more)</span>
+                            </li>
+                            <li class="tw-flex tw-items-center tw-gap-3 tw-text-gray-700">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green"></i>
+                                <span>Advanced filtering and search</span>
+                            </li>
+                            <li class="tw-flex tw-items-center tw-gap-3 tw-text-gray-700">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green"></i>
+                                <span>CSV bulk upload for easy migration</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tw-order-1 lg:tw-order-2">
+                        <div class="tw-rounded-2xl tw-shadow-2xl tw-overflow-hidden tw-border tw-border-gray-200">
+                            <img src="./assets/images/home/shipments-list.png" alt="All Shipments Management View" class="tw-w-full tw-h-auto" loading="lazy" />
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Live Tracking Showcase -->
+                <div class="tw-grid lg:tw-grid-cols-2 tw-gap-12 tw-items-center tw-mb-20">
+                    <div>
+                        <div class="tw-rounded-2xl tw-shadow-2xl tw-overflow-hidden tw-border tw-border-gray-200">
+                            <img src="./assets/images/home/shipment-tracking.jpg" alt="Live Shipment Tracking with Map" class="tw-w-full tw-h-auto" loading="lazy" />
+                        </div>
+                    </div>
+                    <div>
+                        <div class="tw-inline-flex tw-items-center tw-gap-2 tw-bg-brand-green/10 tw-text-brand-green tw-px-4 tw-py-2 tw-rounded-full tw-text-sm tw-font-medium tw-mb-4">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span>Live Tracking</span>
+                        </div>
+                        <h3 class="tw-text-3xl lg:tw-text-4xl tw-font-bold tw-text-gray-800 tw-mb-4">
+                            Real-time <span class="tw-text-brand-green">live tracking</span> on map
+                        </h3>
+                        <p class="tw-text-lg tw-text-gray-600 tw-leading-relaxed tw-mb-6">
+                            Follow your shipments in real-time with interactive maps. See current location, distance remaining, and estimated arrival. Get directions and share tracking links with customers.
+                        </p>
+                        <ul class="tw-space-y-3">
+                            <li class="tw-flex tw-items-center tw-gap-3 tw-text-gray-700">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green"></i>
+                                <span>Interactive map with live coordinates</span>
+                            </li>
+                            <li class="tw-flex tw-items-center tw-gap-3 tw-text-gray-700">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green"></i>
+                                <span>Event timeline for complete shipment history</span>
+                            </li>
+                            <li class="tw-flex tw-items-center tw-gap-3 tw-text-gray-700">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green"></i>
+                                <span>ETA and distance remaining calculations</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Inventory Dashboard Showcase -->
+                <div class="tw-grid lg:tw-grid-cols-2 tw-gap-12 tw-items-center">
+                    <div class="tw-order-2 lg:tw-order-1">
+                        <div class="tw-inline-flex tw-items-center tw-gap-2 tw-bg-yellow-500/10 tw-text-yellow-600 tw-px-4 tw-py-2 tw-rounded-full tw-text-sm tw-font-medium tw-mb-4">
+                            <i class="bi bi-boxes"></i>
+                            <span>Inventory Management</span>
+                        </div>
+                        <h3 class="tw-text-3xl lg:tw-text-4xl tw-font-bold tw-text-gray-800 tw-mb-4">
+                            Never run <span class="tw-text-yellow-600">out of stock</span>
+                        </h3>
+                        <p class="tw-text-lg tw-text-gray-600 tw-leading-relaxed tw-mb-6">
+                            Monitor your inventory in real-time. Track stock levels, set reorder points, and get alerts when items run low. Export reports and manage your entire inventory from one dashboard.
+                        </p>
+                        <ul class="tw-space-y-3">
+                            <li class="tw-flex tw-items-center tw-gap-3 tw-text-gray-700">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green"></i>
+                                <span>Low stock and out of stock alerts</span>
+                            </li>
+                            <li class="tw-flex tw-items-center tw-gap-3 tw-text-gray-700">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green"></i>
+                                <span>Reorder point management</span>
+                            </li>
+                            <li class="tw-flex tw-items-center tw-gap-3 tw-text-gray-700">
+                                <i class="bi bi-check-circle-fill tw-text-brand-green"></i>
+                                <span>Export inventory data anytime</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tw-order-1 lg:tw-order-2">
+                        <div class="tw-rounded-2xl tw-shadow-2xl tw-overflow-hidden tw-border tw-border-gray-200">
+                            <img src="./assets/images/home/inventory-dashboard.png" alt="Inventory Dashboard" class="tw-w-full tw-h-auto" loading="lazy" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== HOW IT WORKS SECTION ==================== -->
+        <section class="tw-py-20 tw-px-6 tw-bg-gradient-to-b tw-from-white tw-to-gray-50">
+            <div class="tw-max-w-[1200px] tw-mx-auto">
+                <div class="tw-text-center tw-mb-16">
+                    <h2 class="tw-text-4xl lg:tw-text-5xl tw-font-bold tw-mb-4" data-i18n="howitworks.title">
+                        Up and running in <span class="tw-text-brand-blue">under 10 minutes</span>
+                    </h2>
+                    <p class="tw-text-xl tw-text-gray-600 tw-max-w-[600px] tw-mx-auto">
+                        No hardware to buy. No complex setup. We’ll even import your first 20 shipments for free.
+                    </p>
+                </div>
+                
+                <div class="tw-grid md:tw-grid-cols-4 tw-gap-6">
+                    <div class="tw-text-center">
+                        <div class="tw-w-16 tw-h-16 tw-bg-gradient-to-br tw-from-brand-blue tw-to-brand-green tw-rounded-full tw-flex tw-items-center tw-justify-center tw-mx-auto tw-mb-4 tw-text-white tw-text-2xl tw-font-bold">
+                            1
+                        </div>
+                        <h3 class="tw-text-lg tw-font-bold tw-text-gray-800 tw-mb-2">Sign Up Free</h3>
+                        <p class="tw-text-gray-600 tw-text-sm">
+                            Start your 30-day free pilot in 60 seconds. No credit card required.
+                        </p>
+                    </div>
+                    
+                    <div class="tw-text-center">
+                        <div class="tw-w-16 tw-h-16 tw-bg-gradient-to-br tw-from-brand-blue tw-to-brand-green tw-rounded-full tw-flex tw-items-center tw-justify-center tw-mx-auto tw-mb-4 tw-text-white tw-text-2xl tw-font-bold">
+                            2
+                        </div>
+                        <h3 class="tw-text-lg tw-font-bold tw-text-gray-800 tw-mb-2">Connect Carriers</h3>
+                        <p class="tw-text-gray-600 tw-text-sm">
+                            Link your DHL, FedEx, UPS, and other carrier accounts.
+                        </p>
+                    </div>
+                    
+                    <div class="tw-text-center">
+                        <div class="tw-w-16 tw-h-16 tw-bg-gradient-to-br tw-from-brand-blue tw-to-brand-green tw-rounded-full tw-flex tw-items-center tw-justify-center tw-mx-auto tw-mb-4 tw-text-white tw-text-2xl tw-font-bold">
+                            3
+                        </div>
+                        <h3 class="tw-text-lg tw-font-bold tw-text-gray-800 tw-mb-2">Import in One Click</h3>
+                        <p class="tw-text-gray-600 tw-text-sm">
+                            One-click CSV import from WhatsApp exports or local carriers. Or we’ll do it for you.
+                        </p>
+                    </div>
+                    
+                    <div class="tw-text-center">
+                        <div class="tw-w-16 tw-h-16 tw-bg-gradient-to-br tw-from-brand-blue tw-to-brand-green tw-rounded-full tw-flex tw-items-center tw-justify-center tw-mx-auto tw-mb-4 tw-text-white tw-text-2xl tw-font-bold">
+                            4
+                        </div>
+                        <h3 class="tw-text-lg tw-font-bold tw-text-gray-800 tw-mb-2">See Results Fast</h3>
+                        <p class="tw-text-gray-600 tw-text-sm">
+                            AI alerts catch delays, routes get optimized. Customers report saving 25–40% on logistics costs — based on routing benchmarks and pilot data.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="tw-flex tw-flex-col tw-items-center tw-mt-12">
+                    <a href="signup.html" class="btn tw-text-lg tw-px-10 tw-py-4">
+                        <span data-i18n="howitworks.cta">Start Your Free Pilot</span>
+                        <i class="bi bi-arrow-right tw-ml-2"></i>
+                    </a>
+                    <p class="tw-text-sm tw-text-gray-500 tw-mt-4" data-i18n="howitworks.footer">Starter Pack includes a guided onboarding call + your first 20 shipments imported free</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SOCIAL PROOF SECTION ==================== -->
+        <section class="tw-py-20 tw-px-6 tw-bg-gradient-to-b tw-from-blue-50/50 tw-to-white">
+            <div class="tw-max-w-[1200px] tw-mx-auto">
+                <div class="tw-text-center tw-mb-12">
+                    <h2 class="tw-text-4xl lg:tw-text-5xl tw-font-bold tw-mb-4">
+                        Trusted by <span class="tw-text-brand-green">logistics teams</span>
+                    </h2>
+                    <p class="tw-text-xl tw-text-gray-600 tw-mb-8">
+                        Trusted by 30+ companies across Panama, Colombia, and Mexico.
+                    </p>
+                    <!-- Trust counter -->
+                    <div class="tw-inline-flex tw-items-center tw-gap-4 tw-bg-white tw-border-2 tw-border-brand-blue/20 tw-rounded-2xl tw-px-8 tw-py-5 tw-shadow-md tw-mb-12">
+                        <div class="tw-flex tw-items-center tw-justify-center tw-w-14 tw-h-14 tw-bg-brand-blue/10 tw-rounded-full">
+                            <i class="bi bi-buildings tw-text-3xl tw-text-brand-blue"></i>
+                        </div>
+                        <div class="tw-text-left">
+                            <div class="tw-text-3xl tw-font-bold tw-text-brand-blue">30+ Companies</div>
+                            <div class="tw-text-gray-600 tw-text-sm">actively tracking shipments with Freytor across Latin America</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- What early users report — framed as pilot findings, not fake reviews -->
+                <div class="tw-grid md:tw-grid-cols-3 tw-gap-8 tw-mb-12">
+                    <div class="tw-bg-white tw-rounded-2xl tw-p-8 tw-shadow-sm tw-border tw-border-gray-100">
+                        <div class="tw-flex tw-items-center tw-justify-center tw-w-12 tw-h-12 tw-bg-blue-50 tw-rounded-xl tw-mb-5">
+                            <i class="bi bi-clock-history tw-text-2xl tw-text-brand-blue"></i>
+                        </div>
+                        <div class="tw-text-3xl tw-font-bold tw-text-brand-blue tw-mb-1">3–5 hrs</div>
+                        <div class="tw-font-semibold tw-text-gray-800 tw-mb-2">Saved per week</div>
+                        <p class="tw-text-gray-600 tw-text-sm tw-leading-relaxed">Pilot users report spending 3–5 fewer hours per week manually managing carrier portals and WhatsApp updates.</p>
+                    </div>
+                    <div class="tw-bg-white tw-rounded-2xl tw-p-8 tw-shadow-sm tw-border tw-border-gray-100">
+                        <div class="tw-flex tw-items-center tw-justify-center tw-w-12 tw-h-12 tw-bg-green-50 tw-rounded-xl tw-mb-5">
+                            <i class="bi bi-fuel-pump tw-text-2xl tw-text-brand-green"></i>
+                        </div>
+                        <div class="tw-text-3xl tw-font-bold tw-text-brand-green tw-mb-1">10–15%</div>
+                        <div class="tw-font-semibold tw-text-gray-800 tw-mb-2">Fuel cost reduction</div>
+                        <p class="tw-text-gray-600 tw-text-sm tw-leading-relaxed">CVRP route optimization delivers 10–15% fuel savings — consistent with published benchmarks from capacitated vehicle routing research.</p>
+                    </div>
+                    <div class="tw-bg-white tw-rounded-2xl tw-p-8 tw-shadow-sm tw-border tw-border-gray-100">
+                        <div class="tw-flex tw-items-center tw-justify-center tw-w-12 tw-h-12 tw-bg-purple-50 tw-rounded-xl tw-mb-5">
+                            <i class="bi bi-arrow-repeat tw-text-2xl tw-text-purple-600"></i>
+                        </div>
+                        <div class="tw-text-3xl tw-font-bold tw-text-purple-600 tw-mb-1">Fewer re-deliveries</div>
+                        <div class="tw-font-semibold tw-text-gray-800 tw-mb-2">Proof of delivery works</div>
+                        <p class="tw-text-gray-600 tw-text-sm tw-leading-relaxed">Photo + signature POD eliminates delivery disputes and reduces costly re-delivery attempts that erode margins.</p>
+                    </div>
+                </div>
+
+                <!-- CTA to get a real testimonial -->
+                <div class="tw-bg-brand-blue/5 tw-border tw-border-brand-blue/15 tw-rounded-2xl tw-p-8 tw-text-center">
+                    <p class="tw-text-gray-700 tw-text-lg tw-mb-4">
+                        <i class="bi bi-chat-quote tw-text-brand-blue tw-mr-2"></i>
+                        Are you one of our early users? <strong>Share your experience</strong> and get 1 free month added to your account.
+                    </p>
+                    <a href="contact.html" class="tw-inline-flex tw-items-center tw-gap-2 tw-bg-brand-blue tw-text-white tw-px-6 tw-py-3 tw-rounded-lg tw-font-semibold hover:tw-bg-brand-blue/90 tw-transition-colors">
+                        <i class="bi bi-envelope"></i> Share Your Story
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PILOT RESULT SECTION ==================== -->
+        <section class="tw-py-20 tw-px-6 tw-bg-white">
+            <div class="tw-max-w-[1200px] tw-mx-auto">
+                <div class="tw-bg-gradient-to-br tw-from-blue-50 tw-to-green-50 tw-rounded-3xl tw-p-8 lg:tw-p-12 tw-border tw-border-gray-100">
+                    <div class="tw-grid lg:tw-grid-cols-2 tw-gap-12 tw-items-center">
+                        <div>
+                            <div class="tw-inline-flex tw-items-center tw-gap-2 tw-bg-brand-green/10 tw-text-brand-green tw-px-4 tw-py-2 tw-rounded-full tw-text-sm tw-font-medium tw-mb-6">
+                                <i class="bi bi-graph-up-arrow"></i>
+                                <span>Pilot Result — Month 1</span>
+                            </div>
+                            <h2 class="tw-text-3xl lg:tw-text-4xl tw-font-bold tw-text-gray-800 tw-mb-6">
+                                Company A reduced delivery management time from <span class="tw-text-brand-green">4 hours to 45 minutes</span> in their first month
+                            </h2>
+                            <p class="tw-text-lg tw-text-gray-600 tw-leading-relaxed tw-mb-6">
+                                A mid-sized e-commerce fulfillment operation in Latin America was juggling 5 separate carrier portals and daily WhatsApp threads to manage shipments. After their Freytor pilot, everything consolidated into one dashboard.
+                            </p>
+                            <blockquote class="tw-border-l-4 tw-border-brand-blue tw-pl-4 tw-italic tw-text-gray-700 tw-mb-6">
+                                "We cut our daily shipment management from 4 hours down to 45 minutes. The route optimization more than paid for itself."
+                            </blockquote>
+                            <p class="tw-font-semibold tw-text-gray-800">— Operations lead, anonymized pilot customer</p>
+                            <p class="tw-text-xs tw-text-gray-400 tw-mt-1">Data from a real pilot. Customer name withheld by request.</p>
+                        </div>
+                        <div>
+                            <div class="tw-grid tw-grid-cols-2 tw-gap-6">
+                                <div class="tw-bg-white tw-rounded-2xl tw-p-6 tw-shadow-lg tw-text-center">
+                                    <div class="tw-text-4xl tw-font-bold tw-text-brand-blue tw-mb-2">4h→45m</div>
+                                    <div class="tw-text-gray-600 tw-text-sm">Daily management time</div>
+                                </div>
+                                <div class="tw-bg-white tw-rounded-2xl tw-p-6 tw-shadow-lg tw-text-center">
+                                    <div class="tw-text-4xl tw-font-bold tw-text-brand-green tw-mb-2">10–15%</div>
+                                    <div class="tw-text-gray-600 tw-text-sm">Fuel savings via routing</div>
+                                </div>
+                                <div class="tw-bg-white tw-rounded-2xl tw-p-6 tw-shadow-lg tw-text-center">
+                                    <div class="tw-text-4xl tw-font-bold tw-text-brand-blue tw-mb-2">5→1</div>
+                                    <div class="tw-text-gray-600 tw-text-sm">Portals consolidated</div>
+                                </div>
+                                <div class="tw-bg-white tw-rounded-2xl tw-p-6 tw-shadow-lg tw-text-center">
+                                    <div class="tw-text-4xl tw-font-bold tw-text-brand-green tw-mb-2">Month 1</div>
+                                    <div class="tw-text-gray-600 tw-text-sm">Time to see results</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== ROI / SAVINGS SECTION ==================== -->
+        <section class="tw-py-20 tw-px-6 tw-bg-white">
+            <div class="tw-max-w-[1200px] tw-mx-auto">
+                <div class="tw-grid lg:tw-grid-cols-2 tw-gap-12 tw-items-center">
+                    <div>
+                        <div class="tw-rounded-2xl tw-overflow-hidden tw-shadow-xl">
+                            <img src="./assets/images/home/business-savings.jpg" alt="Business cost savings with Freytor" class="tw-w-full tw-h-auto" loading="lazy" />
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="tw-text-4xl lg:tw-text-5xl tw-font-bold tw-mb-6">
+                            Save time. <span class="tw-text-brand-green">Save money.</span>
+                        </h2>
+                        <p class="tw-text-xl tw-text-gray-600 tw-leading-relaxed tw-mb-2">
+                            Customers report saving 25–40% on logistics costs. Here's where it comes from:
+                        </p>
+                        <p class="tw-text-sm tw-text-gray-400 tw-mb-8">Based on CVRP research benchmarks and pilot customer data. <a href="faq.html#savings" class="tw-underline hover:tw-text-brand-blue">See methodology →</a></p>
+                        <div class="tw-grid tw-grid-cols-2 tw-gap-6 tw-mb-8">
+                            <div class="tw-bg-gray-50 tw-rounded-xl tw-p-6">
+                                <div class="tw-text-3xl tw-font-bold tw-text-brand-blue tw-mb-1">10–15%</div>
+                                <div class="tw-font-semibold tw-text-gray-800 tw-text-sm tw-mb-1">Fuel savings</div>
+                                <div class="tw-text-gray-500 tw-text-xs">Via CVRP route optimization (industry benchmark)</div>
+                            </div>
+                            <div class="tw-bg-gray-50 tw-rounded-xl tw-p-6">
+                                <div class="tw-text-3xl tw-font-bold tw-text-brand-green tw-mb-1">3–5 hrs</div>
+                                <div class="tw-font-semibold tw-text-gray-800 tw-text-sm tw-mb-1">Weekly time freed</div>
+                                <div class="tw-text-gray-500 tw-text-xs">No more juggling multiple carrier portals</div>
+                            </div>
+                            <div class="tw-bg-gray-50 tw-rounded-xl tw-p-6">
+                                <div class="tw-text-3xl tw-font-bold tw-text-brand-blue tw-mb-1">Fewer</div>
+                                <div class="tw-font-semibold tw-text-gray-800 tw-text-sm tw-mb-1">Failed deliveries</div>
+                                <div class="tw-text-gray-500 tw-text-xs">POD + AI alerts reduce re-delivery costs</div>
+                            </div>
+                            <div class="tw-bg-gray-50 tw-rounded-xl tw-p-6">
+                                <div class="tw-text-3xl tw-font-bold tw-text-brand-green tw-mb-1">Best rate</div>
+                                <div class="tw-font-semibold tw-text-gray-800 tw-text-sm tw-mb-1">Per shipment</div>
+                                <div class="tw-text-gray-500 tw-text-xs">Carrier rate comparisons on Growth &amp; Enterprise</div>
+                            </div>
+                        </div>
+                        <a href="signup.html" class="btn tw-text-lg tw-px-8 tw-py-4">
+                            Start Your Free Pilot <i class="bi bi-arrow-right tw-ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PRICING PREVIEW SECTION ==================== -->
+        <section class="tw-py-20 tw-px-6 tw-bg-gradient-to-b tw-from-white tw-to-gray-50">
+            <div class="tw-max-w-[1000px] tw-mx-auto tw-text-center">
+                <h2 class="tw-text-4xl lg:tw-text-5xl tw-font-bold tw-mb-4">
+                    Simple, <span class="tw-text-brand-blue">transparent</span> pricing
+                </h2>
+                <p class="tw-text-xl tw-text-gray-600 tw-mb-4">
+                    Start with a free 30-day pilot. No hardware needed, ever.
+                </p>
+                <div class="tw-flex tw-flex-wrap tw-justify-center tw-gap-2 tw-mb-12">
+                    <span class="tw-inline-flex tw-items-center tw-gap-1.5 tw-bg-green-100 tw-text-green-700 tw-px-3 tw-py-1.5 tw-rounded-full tw-text-xs tw-font-bold tw-border tw-border-green-200"><i class="bi bi-telephone"></i> Guided Onboarding Call</span>
+                    <span class="tw-inline-flex tw-items-center tw-gap-1.5 tw-bg-blue-100 tw-text-blue-700 tw-px-3 tw-py-1.5 tw-rounded-full tw-text-xs tw-font-bold tw-border tw-border-blue-200"><i class="bi bi-upload"></i> 1-Click CSV Import</span>
+                    <span class="tw-inline-flex tw-items-center tw-gap-1.5 tw-bg-purple-100 tw-text-purple-700 tw-px-3 tw-py-1.5 tw-rounded-full tw-text-xs tw-font-bold tw-border tw-border-purple-200"><i class="bi bi-gift"></i> First 20 Shipments Free</span>
+                </div>
+                
+                <div class="tw-grid md:tw-grid-cols-3 tw-gap-6 tw-mb-8">
+                    <div class="tw-bg-gray-50 tw-rounded-2xl tw-p-8 tw-border-2 tw-border-gray-200">
+                        <h3 class="tw-text-lg tw-font-semibold tw-text-gray-500 tw-mb-2">STARTER</h3>
+                        <div class="tw-text-4xl tw-font-bold tw-text-gray-800 tw-mb-1">$19<span class="tw-text-lg tw-text-gray-500">/mo</span></div>
+                        <p class="tw-text-xs tw-text-brand-blue tw-font-semibold tw-uppercase tw-mb-4">Core Logistics + Guided Onboarding</p>
+                        <p class="tw-text-gray-600 tw-mb-6">Perfect for small teams — includes onboarding call</p>
+                        <ul class="tw-text-left tw-space-y-3 tw-text-gray-600 tw-text-sm">
+                            <li class="tw-flex tw-items-center tw-gap-2"><i class="bi bi-check tw-text-brand-green"></i> 100 shipments/month</li>
+                            <li class="tw-flex tw-items-center tw-gap-2"><i class="bi bi-check tw-text-brand-green"></i> Tracking updates every 30 min</li>
+                            <li class="tw-flex tw-items-center tw-gap-2"><i class="bi bi-check tw-text-brand-green"></i> Basic route optimization</li>
+                            <li class="tw-flex tw-items-center tw-gap-2 tw-text-xs tw-text-gray-400"><i class="bi bi-info-circle"></i> +$0.15/shipment over 100</li>
+                            <li class="tw-flex tw-items-center tw-gap-2"><i class="bi bi-check tw-text-brand-green"></i> Basic delay alerts (email)</li>
+                            <li class="tw-flex tw-items-center tw-gap-2"><i class="bi bi-check tw-text-brand-green"></i> KPI dashboard</li>
+                            <li class="tw-flex tw-items-center tw-gap-2"><i class="bi bi-check tw-text-brand-green"></i> 1 user seat</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tw-bg-gradient-to-b tw-from-brand-blue tw-to-brand-green tw-rounded-2xl tw-p-8 tw-text-white tw-relative tw-scale-105">
+                        <div class="tw-absolute tw--top-4 tw-left-1/2 tw--translate-x-1/2 tw-bg-yellow-400 tw-text-gray-900 tw-text-xs tw-font-bold tw-px-4 tw-py-1 tw-rounded-full">MOST POPULAR</div>
+                        <h3 class="tw-text-lg tw-font-semibold tw-text-white/80 tw-mb-2">GROWTH</h3>
+                        <div class="tw-text-4xl tw-font-bold tw-mb-1">$39<span class="tw-text-lg tw-text-white/80">/mo</span></div>
+                        <p class="tw-text-xs tw-text-white/90 tw-font-semibold tw-uppercase tw-mb-4">Everything in Starter, plus:</p>
+                        <p class="tw-text-white/80 tw-mb-6">For growing logistics operations</p>
+                        <ul class="tw-text-left tw-space-y-3 tw-text-sm">
+                            <li class="tw-flex tw-items-center tw-gap-2"><i class="bi bi-check"></i> 500 shipments/month</li>
+                            <li class="tw-flex tw-items-center tw-gap-2"><i class="bi bi-check"></i> Proof of Delivery (POD)</li>
+                            <li class="tw-flex tw-items-center tw-gap-2"><i class="bi bi-check"></i> AI alerts (WhatsApp/SMS/email)</li>
+                            <li class="tw-flex tw-items-center tw-gap-2"><i class="bi bi-check"></i> CVRP + multi-driver dispatch</li>
+                            <li class="tw-flex tw-items-center tw-gap-2"><i class="bi bi-check"></i> Driver mobile/PWA</li>
+                            <li class="tw-flex tw-items-center tw-gap-2"><i class="bi bi-check"></i> Inventory tracking &amp; team notes</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tw-bg-gray-50 tw-rounded-2xl tw-p-8 tw-border-2 tw-border-gray-200">
+                        <h3 class="tw-text-lg tw-font-semibold tw-text-gray-500 tw-mb-2">ENTERPRISE</h3>
+                        <div class="tw-text-4xl tw-font-bold tw-text-gray-800 tw-mb-1">$79<span class="tw-text-lg tw-text-gray-500">/mo</span></div>
+                        <p class="tw-text-xs tw-text-brand-blue tw-font-semibold tw-uppercase tw-mb-4">Everything in Growth, plus:</p>
+                        <p class="tw-text-gray-600 tw-mb-6">Full platform for scaling teams</p>
+                        <ul class="tw-text-left tw-space-y-3 tw-text-gray-600 tw-text-sm">
+                            <li class="tw-flex tw-items-center tw-gap-2"><i class="bi bi-check tw-text-brand-green"></i> Unlimited shipments</li>
+                            <li class="tw-flex tw-items-center tw-gap-2"><i class="bi bi-check tw-text-brand-green"></i> Fleet management &amp; maintenance</li>
+                            <li class="tw-flex tw-items-center tw-gap-2"><i class="bi bi-check tw-text-brand-green"></i> Full CVRP solver + EV routing</li>
+                            <li class="tw-flex tw-items-center tw-gap-2"><i class="bi bi-check tw-text-brand-green"></i> Workflow automation</li>
+                            <li class="tw-flex tw-items-center tw-gap-2"><i class="bi bi-check tw-text-brand-green"></i> Exportable reports &amp; analytics</li>
+                            <li class="tw-flex tw-items-center tw-gap-2"><i class="bi bi-check tw-text-brand-green"></i> Unlimited users + SSO</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <a href="pricing.html" class="tw-text-brand-blue tw-font-semibold hover:tw-underline">
+                    View full pricing details <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- ==================== FAQ SECTION ==================== -->
+        <section class="tw-py-20 tw-px-6 tw-bg-gray-50">
+            <div class="tw-max-w-[800px] tw-mx-auto">
+                <div class="tw-text-center tw-mb-12">
+                    <h2 class="tw-text-4xl lg:tw-text-5xl tw-font-bold tw-mb-4">
+                        Frequently asked <span class="tw-text-brand-blue">questions</span>
+                    </h2>
+                </div>
+                
+                <div class="tw-space-y-4">
+                    <details class="tw-bg-white tw-rounded-xl tw-p-6 tw-shadow-sm tw-border tw-border-gray-100 tw-group">
+                        <summary class="tw-flex tw-justify-between tw-items-center tw-cursor-pointer tw-font-semibold tw-text-gray-800">
+                            How long does it take to set up Freytor?
+                            <i class="bi bi-plus-lg tw-text-brand-blue tw-transition-transform group-open:tw-rotate-45"></i>
+                        </summary>
+                        <p class="tw-mt-4 tw-text-gray-600 tw-leading-relaxed">
+                            Most teams are up and running within 15 minutes. Simply connect your carrier accounts, invite your team, and you're ready to go. No technical expertise required.
+                        </p>
+                    </details>
+                    
+                    <details class="tw-bg-white tw-rounded-xl tw-p-6 tw-shadow-sm tw-border tw-border-gray-100 tw-group">
+                        <summary class="tw-flex tw-justify-between tw-items-center tw-cursor-pointer tw-font-semibold tw-text-gray-800">
+                            Which carriers do you support?
+                            <i class="bi bi-plus-lg tw-text-brand-blue tw-transition-transform group-open:tw-rotate-45"></i>
+                        </summary>
+                        <p class="tw-mt-4 tw-text-gray-600 tw-leading-relaxed">
+                            We support 100+ carriers globally including DHL, FedEx, UPS, USPS, and many regional carriers in emerging markets. If you don't see your carrier, let us know and we'll add it.
+                        </p>
+                    </details>
+                    
+                    <details class="tw-bg-white tw-rounded-xl tw-p-6 tw-shadow-sm tw-border tw-border-gray-100 tw-group">
+                        <summary class="tw-flex tw-justify-between tw-items-center tw-cursor-pointer tw-font-semibold tw-text-gray-800">
+                            Can I try Freytor before committing?
+                            <i class="bi bi-plus-lg tw-text-brand-blue tw-transition-transform group-open:tw-rotate-45"></i>
+                        </summary>
+                        <p class="tw-mt-4 tw-text-gray-600 tw-leading-relaxed">
+                            Yes! We offer a 30-day free pilot (not just a trial) with full access to all features. No credit card required. We’ll even import your first 20 shipments for free and show you the savings during a guided onboarding call.
+                        </p>
+                    </details>
+                    
+                    <details class="tw-bg-white tw-rounded-xl tw-p-6 tw-shadow-sm tw-border tw-border-gray-100 tw-group">
+                        <summary class="tw-flex tw-justify-between tw-items-center tw-cursor-pointer tw-font-semibold tw-text-gray-800">
+                            Do I need GPS hardware or special devices?
+                            <i class="bi bi-plus-lg tw-text-brand-blue tw-transition-transform group-open:tw-rotate-45"></i>
+                        </summary>
+                        <p class="tw-mt-4 tw-text-gray-600 tw-leading-relaxed">
+                            Not at all. Freytor is 100% hardware-free. We use carrier APIs and simple driver check-ins through our mobile app for full visibility — no GPS trackers, no expensive devices, no installation required.
+                        </p>
+                    </details>
+                    
+                    <details class="tw-bg-white tw-rounded-xl tw-p-6 tw-shadow-sm tw-border tw-border-gray-100 tw-group">
+                        <summary class="tw-flex tw-justify-between tw-items-center tw-cursor-pointer tw-font-semibold tw-text-gray-800">
+                            What makes Freytor different from enterprise logistics tools?
+                            <i class="bi bi-plus-lg tw-text-brand-blue tw-transition-transform group-open:tw-rotate-45"></i>
+                        </summary>
+                        <p class="tw-mt-4 tw-text-gray-600 tw-leading-relaxed">
+                            Freytor gives you enterprise capabilities — AI delay predictions, CVRP route optimization, proof of delivery, driver app, fleet management, and sustainability routing — all at SME-friendly pricing. No contracts, no hardware, setup in under 10 minutes.
+                        </p>
+                    </details>
+                    
+                    <details class="tw-bg-white tw-rounded-xl tw-p-6 tw-shadow-sm tw-border tw-border-gray-100 tw-group">
+                        <summary class="tw-flex tw-justify-between tw-items-center tw-cursor-pointer tw-font-semibold tw-text-gray-800">
+                            Is my data secure with Freytor?
+                            <i class="bi bi-plus-lg tw-text-brand-blue tw-transition-transform group-open:tw-rotate-45"></i>
+                        </summary>
+                        <p class="tw-mt-4 tw-text-gray-600 tw-leading-relaxed">
+                            Your data is encrypted in transit (256-bit SSL) and at rest. We perform daily encrypted backups, enforce strict access controls, and never share your data with third parties. SOC 2 Type II certification is currently in progress. We follow GDPR principles — you can request deletion of your data at any time via <a href="mailto:privacy@freytor.com" class="tw-text-brand-blue hover:tw-underline">privacy@freytor.com</a>.
+                        </p>
+                    </details>
+                </div>
+                
+                <div class="tw-text-center tw-mt-8">
+                    <a href="faq.html" class="tw-text-brand-blue tw-font-semibold hover:tw-underline">
+                        View all FAQs <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SECURITY & COMPLIANCE SECTION ==================== -->
+        <section class="tw-py-16 tw-px-6 tw-bg-white">
+            <div class="tw-max-w-[1000px] tw-mx-auto tw-text-center">
+                <h3 class="tw-text-2xl tw-font-bold tw-text-gray-800 tw-mb-3">Security-First Architecture</h3>
+                <p class="tw-text-gray-500 tw-text-sm tw-mb-8">Here's exactly what we do to protect your data — no marketing badges, just facts.</p>
+                <div class="tw-flex tw-flex-wrap tw-justify-center tw-items-center tw-gap-8 lg:tw-gap-12">
+                    <!-- SOC 2 in progress -->
+                    <div class="tw-flex tw-flex-col tw-items-center tw-gap-3">
+                        <div class="tw-w-20 tw-h-20 tw-bg-blue-50 tw-rounded-full tw-flex tw-items-center tw-justify-center">
+                            <i class="bi bi-shield-check tw-text-4xl tw-text-brand-blue"></i>
+                        </div>
+                        <div class="tw-text-center">
+                            <p class="tw-font-bold tw-text-gray-800">SOC 2 Type II</p>
+                            <p class="tw-text-sm tw-text-gray-500">Certification in progress</p>
+                        </div>
+                    </div>
+                    <!-- SSL -->
+                    <div class="tw-flex tw-flex-col tw-items-center tw-gap-3">
+                        <div class="tw-w-20 tw-h-20 tw-bg-green-50 tw-rounded-full tw-flex tw-items-center tw-justify-center">
+                            <i class="bi bi-lock-fill tw-text-4xl tw-text-brand-green"></i>
+                        </div>
+                        <div class="tw-text-center">
+                            <p class="tw-font-bold tw-text-gray-800">256-bit SSL</p>
+                            <p class="tw-text-sm tw-text-gray-500">Encrypted in transit &amp; at rest</p>
+                        </div>
+                    </div>
+                    <!-- GDPR aligned -->
+                    <div class="tw-flex tw-flex-col tw-items-center tw-gap-3">
+                        <div class="tw-w-20 tw-h-20 tw-bg-purple-50 tw-rounded-full tw-flex tw-items-center tw-justify-center">
+                            <i class="bi bi-globe-europe-africa tw-text-4xl tw-text-purple-600"></i>
+                        </div>
+                        <div class="tw-text-center">
+                            <p class="tw-font-bold tw-text-gray-800">GDPR-Aligned</p>
+                            <p class="tw-text-sm tw-text-gray-500">Data deletion on request</p>
+                        </div>
+                    </div>
+                    <!-- Uptime -->
+                    <div class="tw-flex tw-flex-col tw-items-center tw-gap-3">
+                        <div class="tw-w-20 tw-h-20 tw-bg-yellow-50 tw-rounded-full tw-flex tw-items-center tw-justify-center">
+                            <i class="bi bi-lightning-charge-fill tw-text-4xl tw-text-yellow-500"></i>
+                        </div>
+                        <div class="tw-text-center">
+                            <p class="tw-font-bold tw-text-gray-800">99.9%</p>
+                            <p class="tw-text-sm tw-text-gray-500">Uptime SLA</p>
+                        </div>
+                    </div>
+                    <!-- No data sharing -->
+                    <div class="tw-flex tw-flex-col tw-items-center tw-gap-3">
+                        <div class="tw-w-20 tw-h-20 tw-bg-red-50 tw-rounded-full tw-flex tw-items-center tw-justify-center">
+                            <i class="bi bi-slash-circle tw-text-4xl tw-text-red-500"></i>
+                        </div>
+                        <div class="tw-text-center">
+                            <p class="tw-font-bold tw-text-gray-800">Zero Data Selling</p>
+                            <p class="tw-text-sm tw-text-gray-500">We never share your data</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== FINAL CTA SECTION ==================== -->
+        <section class="tw-py-20 tw-px-6 tw-bg-gradient-to-r tw-from-brand-blue tw-to-brand-green">
+            <div class="tw-max-w-[800px] tw-mx-auto tw-text-center tw-text-white">
+                <h2 class="tw-text-4xl lg:tw-text-5xl tw-font-bold tw-mb-6">
+                    Ready to simplify your logistics?
+                </h2>
+                <p class="tw-text-xl tw-text-white/90 tw-mb-4">
+                    Start your free 30-day pilot. We’ll import your first 20 shipments and show you the savings.
+                </p>
+                <div class="tw-flex tw-flex-wrap tw-justify-center tw-gap-3 tw-mb-8">
+                    <span class="tw-inline-flex tw-items-center tw-gap-1.5 tw-bg-white/20 tw-backdrop-blur-sm tw-text-white tw-px-3 tw-py-1.5 tw-rounded-full tw-text-xs tw-font-bold tw-uppercase tw-tracking-wide tw-border tw-border-white/30"><i class="bi bi-gift"></i> Free Onboarding Call</span>
+                    <span class="tw-inline-flex tw-items-center tw-gap-1.5 tw-bg-white/20 tw-backdrop-blur-sm tw-text-white tw-px-3 tw-py-1.5 tw-rounded-full tw-text-xs tw-font-bold tw-uppercase tw-tracking-wide tw-border tw-border-white/30"><i class="bi bi-upload"></i> 20 Shipments Imported Free</span>
+                    <span class="tw-inline-flex tw-items-center tw-gap-1.5 tw-bg-white/20 tw-backdrop-blur-sm tw-text-white tw-px-3 tw-py-1.5 tw-rounded-full tw-text-xs tw-font-bold tw-uppercase tw-tracking-wide tw-border tw-border-white/30"><i class="bi bi-cpu"></i> Zero Hardware Required</span>
+                </div>
+                
+                <div class="tw-flex tw-flex-col sm:tw-flex-row tw-justify-center tw-gap-4 tw-mb-8">
+                    <a href="signup.html" class="tw-bg-white tw-text-brand-blue tw-px-8 tw-py-4 tw-rounded-lg tw-font-semibold tw-text-lg tw-shadow-lg hover:tw-shadow-xl tw-transition-all hover:tw--translate-y-1">
+                        Start Your Free Pilot
+                    </a>
+                    <a href="contact.html" class="tw-border-2 tw-border-white tw-text-white tw-px-8 tw-py-4 tw-rounded-lg tw-font-semibold tw-text-lg hover:tw-bg-white/10 tw-transition-all">
+                        Book a Demo
+                    </a>
+                </div>
+                
+                <p class="tw-text-white/70 tw-text-sm">
+                    No credit card required • 30-day free pilot • Cancel anytime
+                </p>
+            </div>
+        </section>
+        </main>
+
+        <!-- Footer Component -->
+        <div id="footer-component"></div>
+        
+        <!-- WhatsApp Floating Button -->
+        <a href="https://wa.me/50766393293?text=Hi%2C%20I'm%20interested%20in%20Freytor%20for%20my%20logistics%20business" 
+           target="_blank"
+           rel="noopener noreferrer"
+           class="tw-fixed tw-bottom-6 tw-right-6 tw-z-50 tw-bg-green-500 hover:tw-bg-green-600 tw-text-white tw-rounded-full tw-p-4 tw-shadow-2xl hover:tw-scale-110 tw-transition-all tw-duration-300"
+           onclick="trackEvent('whatsapp_click', 'contact', 'floating_button')"
+           aria-label="Contact us on WhatsApp"
+           title="Chat with us on WhatsApp">
+            <i class="bi bi-whatsapp tw-text-3xl"></i>
+        </a>
+
+        <script src="./translations.js"></script>
+        <script src="./i18n.js"></script>
+        <script src="./index.js"></script>
+        <script src="./components/components.js"></script>
+        <script src="./exit-intent.js"></script>
+    </body>
+</html>
